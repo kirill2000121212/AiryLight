@@ -16,8 +16,7 @@ const compression = () =>
             imagemin.svgo({ plugins : [
                 {removeViewBox: true},
                 {cleanupIDs: false}
-            ] }),
-            imagemin.optipng({ optimizationLevel : 10 })
+            ] })
         ])
     ))
     .pipe(dest("./client/compressedImg"))

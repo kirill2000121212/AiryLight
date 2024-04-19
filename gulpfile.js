@@ -17,7 +17,7 @@ const compression = () =>
                 {removeViewBox: true},
                 {cleanupIDs: false}
             ] }),
-            imagemin.optipng({ optimizationLevel : 5 })
+            imagemin.optipng({ optimizationLevel : 10 })
         ])
     ))
     .pipe(dest("./client/compressedImg"))

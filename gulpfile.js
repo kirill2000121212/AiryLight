@@ -27,7 +27,7 @@ const watching = () =>
         server : { baseDir : './client' },
         port : 4000
     }) 
-    watch(['client/scss/index.scss'], styles)
+    watch(['client/scss/*.scss'], styles)
     watch(['client/js/main.js'], javaScript)
     watch(['client/*.html']).on('change', browserSync.reload)
 

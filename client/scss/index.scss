@@ -1,12 +1,42 @@
-
-body{
-    background-color: rgb(48, 48, 48);
-    color: aliceblue;
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
 }
 
-.header{
-    background-color: aqua;
-    &__top{
-        max-width: 1220px;
+.header {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 144px;
+        font-family: "Nunito Sans Regular";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+
+    }
+
+    &__top-list {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    &__bottom-box {
+        max-width: 597px;
+    }
+
+    &__bottom-title {
+        font-family: "Druk Wide Medium";
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 50px;
     }
 }

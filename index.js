@@ -7,13 +7,8 @@ const PORT = process.env.PORT;
 
 APP.use(CORS());
 
-const data = [
-    { name : "vlad", age : 18 },
-    { name : "kirill", age : 44 }
-]
-
 APP.get("/data", (req, res) => {
-    res.send(JSON.stringify(data));
+    res.send("lol");
 })
 
 APP.listen(PORT, () => {

@@ -4,6 +4,23 @@ const concat = require("gulp-concat");
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require("browser-sync").create();
 const cleaner = require("gulp-clean");
+const imagemin = require("gulp-imagemin");
+const cache = require("gulp-cache");
+
+
+const compression = () => 
+    src("./client/images/*")
+    .pipe(cache(
+        imagemin([
+            imagemin.mozjpeg({ quality : 70, progressive : true }),
+            imagemin.svgo({ plugins : [
+                {removeViewBox: true},
+                {cleanupIDs: false}
+            ] }),
+            imagemin.optipng({ optimizationLevel : 5 })
+        ])
+    ))
+    .pipe(dest("./client/compressedImg"))
 
 
 const styles = () => 
@@ -50,6 +67,7 @@ const building = () =>
 exports.styles = styles;
 exports.javaScript = javaScript;
 exports.watching = watching;
+exports.compression = compression;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, javaScript, watching);
+exports.default = parallel(styles, javaScript, compression, watching);

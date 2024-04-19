@@ -1,0 +1,30 @@
+{
+  "name": "airy-light",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "index.js",
+  "proxy": "http://localhost:5000",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "concurrently --kill-others \"gulp\" \"npm run server\"",
+    "build" : "gulp build"
+  },
+  "author": "vlados and kira",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "gulp": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "nodemon": "^3.1.0",
+    "sass": "^1.75.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5"
+  }
+}

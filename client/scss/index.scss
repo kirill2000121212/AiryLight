@@ -1,0 +1,12 @@
+
+body{
+    background-color: rgb(48, 48, 48);
+    color: aliceblue;
+}
+
+.header{
+    background-color: aqua;
+    &__top{
+        max-width: 1220px;
+    }
+}

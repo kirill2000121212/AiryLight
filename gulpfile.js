@@ -10,15 +10,7 @@ const cache = require("gulp-cache");
 
 const compression = () => 
     src("./client/images/*")
-    .pipe(cache(
-        imagemin([
-            imagemin.mozjpeg({ quality : 70, progressive : true }),
-            imagemin.svgo({ plugins : [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ] })
-        ])
-    ))
+    .pipe(cache(imagemin()))
     .pipe(dest("./client/compressedImg"))
 
 

@@ -7,6 +7,8 @@
     <title>AiryLight</title>
     <link rel="stylesheet" href="./css/style.min.css">
     <script src="./js/main.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
                         <img class="list-item__img" src="./images/lock.svg" alt="lock">
                         Вход
                     </li>
-                    <li class="header-top__list-item">
+                    <li id="signup" class="header-top__list-item">
                         Регистрация
                     </li>
                     <li class="header-top__list-item">
@@ -27,17 +29,52 @@
                         Меню
                     </li>
                 </ul>
+                <dialog id="modal-signUp" open>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-pagination">
+                                <ul class="swiper-pagination__list">
+                                    <li class="swiper-pagination__list-item"></li>
+                                    <li class="swiper-pagination__list-item"></li>
+                                    <li class="swiper-pagination__list-item"></li>
+                                    <li class="swiper-pagination__list-item"></li>
+                                    <li class="swiper-pagination__list-item"></li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+
+
+
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
+
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </dialog>
             </div>
             <div class="header__bottom">
                 <div class="header__bottom-box">
                     <h3 class="header__bottom-title">Революционный
-                        способ <span>знакомств</span></h3>
-                    <p class="header__bottom-text"></p>
+                        способ <span class="header__bottom-title--gradient">знакомств</span></h3>
+                    <p class="header__bottom-text">Искусственный интеллект бесплатно подберет для вас пару или друзей и
+                        организует встречу в безопасном месте</p>
                     <div class="header__bottom-btn">
-                        <button class="btn__left"></button>
-                        <button class="btn__right"></button>
+                        <button class="btn__left">
+                            Хочу попробовать
+                            <img src="./compressedImg/try-icon.svg" alt="try-icon">
+                        </button>
+                        <button class="btn__right">
+                            Как это работает?
+                            <img src="./compressedImg/how-work-arrow.svg" alt="how-work-arrow">
+                        </button>
                     </div>
+                    <img class="arrow" src="./compressedImg/how-work-arrow.svg" alt="how-work-arrow">
                 </div>
+
+                <img src="./compressedImg/header-phone.png" alt="header-phone">
             </div>
         </div>
     </header>

@@ -1,6 +1,6 @@
 # Наш первый совместный с ***Кирюшей*** проект!
 ## Попробуем не спиться...
-<div style="display: flex; justify-content: center; align-items: center">
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: row">
   <img
     width="310"
     height="220"

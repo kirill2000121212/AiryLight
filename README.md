@@ -1,7 +1,13 @@
 # Наш первый совместный с ***Кирюшей*** проект!
 ## Попробуем не спиться...
+<style>
+  .flex{
+    display: flex;
+    flex-direction: row;
+  }
+</style>
 <div align="center">
-  <div style="display: flex; flex-direction: row;">
+  <div class="flex">
     <img
       align="center"
     width="310"

@@ -98,15 +98,15 @@
 }
 
 #modal-signUp {
-    max-width: 430px;
-    width: 430px;
     height: 320px;
     border: none;
     border-radius: 20px;
     box-shadow: 0px 10px 50px 0px rgba(179, 186, 207, 0.2);
     background: rgb(255, 255, 255);
     outline: none;
-    padding: 30px;
+    position: relative;
+    overflow: hidden;
+
 }
 
 #modal-signUp::backdrop {
@@ -114,21 +114,108 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
+#close-modal{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
 
-.swiper-pagination__list {
+.slick-dots{
     display: flex;
     gap: 5px;
+    padding-top: 6px;
 
-    &-item {
+
+    & li{
         width: 64px;
         height: 4px;
         border-radius: 9px;
         background: rgb(179, 186, 207);
         opacity: 0.25;
+        //вынужденная мера Т_Т
+        & button[id^="slick-slide-control"]{
+            display: none;
+        }
+    }
+
+    & .slick-active{
+        background: rgb(179, 186, 207);
+        opacity: 1;
     }
 }
 
-.swiper-slide {
+.slick-list{
     display: flex;
-    flex-direction: column;
+}
+
+.slick-current{
+    max-width: 369px;
+}
+
+.slick-track{
+    max-width: 370px;
+    will-change: transform;
+    overflow: hidden;
+}
+
+
+.modal-signUp__slick{
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: 258px;
+    gap: 40px;
+}
+
+.slide__choose-sex{
+    
+    & b{
+        color: rgb(4, 36, 43);
+        font-family: "Nunito Sans Bold";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 33px;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    & p{
+        font-family: "Nunito Sans Regular";
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    & span{
+        display: block;
+        padding: 36px 0 24px;
+    }
+
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    width: 100%;
+
+    & button{
+        color: rgb(255, 255, 255);
+        font-family: "Nunito Sans Regular";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 10px 54px;
+        background: rgb(255, 68, 96);
+        border: none;
+    }
+
+    & button[data-choose="man"]{
+        border-radius: 12px 0 0 12px;
+    }
+
+    & button[data-choose="girl"]{
+        border-radius: 0 12px 12px 0;
+    }
 }

@@ -162,6 +162,7 @@
 .your-man {
     background-image: url(../images/your-man__cool-man.png);
     background-color: rgb(81, 81, 81);
+    scroll-snap-align: start;
 
     &__title {
 

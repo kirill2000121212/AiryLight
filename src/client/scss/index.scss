@@ -11,17 +11,13 @@
 
     &__top {
         display: flex;
-        gap: 860px;
+        justify-content: space-between;
         align-items: center;
-        padding: 30px 200px;
+        padding-top: 30px;
         font-family: "Nunito Sans Regular";
         font-size: 16px;
         font-weight: 500;
         line-height: 22px;
-        position: fixed;
-        z-index: 10;
-        background-color: white;
-        width: 100%;
     }
 
     &__top-logo {
@@ -43,7 +39,6 @@
     &__bottom {
         display: flex;
         position: relative;
-        padding-top: 62px;
     }
 
     &__bottom-phone {
@@ -51,7 +46,7 @@
         z-index: -1;
         position: absolute;
         right: 150px;
-        top: 51px;
+        top: -10px;
     }
 
     &__bottom-img {
@@ -169,6 +164,7 @@
     background-color: rgb(81, 81, 81);
 
     &__title {
+
         font-family: "DrukCyr-Medium";
         font-size: 123px;
         line-height: 130px;

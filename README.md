@@ -1,11 +1,6 @@
 # Наш первый совместный с ***Кирюшей*** проект!
 ## Попробуем не спиться...
-<style>
-  .flex{
-    display: flex;
-    flex-direction: row;
-  }
-</style>
+
 <div align="center">
   <div class="flex">
     <img
@@ -22,7 +17,7 @@
 >Приложуха о том как найти свою любовь за огромные деньги и при этом не обосраться
 
 ### Шо юзаем:
-1. ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+1.  ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 2. 	![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 3. 	![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 4. 	![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)

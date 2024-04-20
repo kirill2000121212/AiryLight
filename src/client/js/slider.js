@@ -2,6 +2,9 @@ const $dialog = document.querySelector("#modal-signUp");
 const $signUpOpenModal = $("#signup");
 const $signUpCloseModal = $("#close-modal");
 
-$signUpOpenModal.click(() => $dialog.showModal())
+$signUpOpenModal.click(() => {
+    $('body').css('overflow','hidden')
+    $dialog.showModal()
+})
 $signUpCloseModal.click(() => $dialog.close())
 

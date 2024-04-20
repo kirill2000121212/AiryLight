@@ -1,4 +1,6 @@
-@import url("../../node_modules/swiper/swiper-bundle");
+@import "./fonts";
+@import "./reset";
+@import "./variables";
 
 .container {
     max-width: 1290px;
@@ -95,12 +97,23 @@
     padding-top: 234px;
 }
 
-#modal-signUp {}
+#modal-signUp{
+    max-width: 430px;
+    width: 430px;
+    height: 320px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 10px 50px 0px rgba(179, 186, 207, 0.2);
+    background: rgb(255, 255, 255);
+    outline: none;
+    padding: 30px;
+}
 
-:modal {
+#modal-signUp::backdrop {
     backdrop-filter: blur(100px);
     background: rgba(255, 255, 255, 0.5);
 }
+
 
 .swiper-pagination__list {
     display: flex;
@@ -113,4 +126,10 @@
         background: rgb(179, 186, 207);
         opacity: 0.25;
     }
+}
+
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    
 }

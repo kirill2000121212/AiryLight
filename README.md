@@ -1,13 +1,14 @@
 # Наш первый совместный с ***Кирюшей*** проект!
 ## Попробуем не спиться...
-<div style="display: flex; justify-content: center; align-items: center; flex-direction: row" align="center">
+<div align="center">
   <div>
     <img
+      align="center"
     width="310"
     height="220"
     src="https://github.com/kirill2000121212/AiryLight/assets/123495483/2b373976-1f60-4423-863a-4aa2183abd5f"
   />
-  </div><div>👨‍❤️‍👨</div><div><img width="310" height="220" src="https://github.com/kirill2000121212/AiryLight/assets/123495483/80756793-0be7-4355-b0d6-808fa84d0a00"/>
+  </div><div>👨‍❤️‍👨</div><div><img align="center" width="310" height="220" src="https://github.com/kirill2000121212/AiryLight/assets/123495483/80756793-0be7-4355-b0d6-808fa84d0a00"/>
   </div>
 </div>
 
@@ -21,3 +22,4 @@
 4. 	![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 5. 	![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 6. 	![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+7. 	![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)

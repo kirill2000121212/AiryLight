@@ -1,7 +1,7 @@
 # Наш первый совместный с ***Кирюшей*** проект!
 ## Попробуем не спиться...
 <div align="center">
-  <div>
+  <div style="display: flex; flex-direction: row;">
     <img
       align="center"
     width="310"

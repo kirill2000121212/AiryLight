@@ -99,20 +99,25 @@
 }
 
 #modal-signUp {
-    // min-height: 230px;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border: none;
-    border-radius: 20px;
-    box-shadow: 0px 10px 50px 0px rgba(179, 186, 207, 0.2);
-    background: rgb(255, 255, 255);
+    backdrop-filter: blur(100px);
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     outline: none;
-    position: relative;
     overflow: hidden;
     padding: 0;
 }
 
-#modal-signUp::backdrop {
-    backdrop-filter: blur(100px);
-    background: rgba(255, 255, 255, 0.5);
+#modal-signUp-container{
+    position: relative;
 }
 
 #close-modal{
@@ -149,6 +154,7 @@
 
 .slick-list{
     overflow: hidden;
+    min-height: 100%;
 }
 
 
@@ -160,15 +166,16 @@
     min-width: 0;
 }
 
-
 .modal-signUp__slick{
     display: flex;
     flex-direction: column-reverse;
     padding: 30px;
     gap: 40px;
-    min-width: 0;
+    box-shadow: 0px 10px 50px 0px rgba(179, 186, 207, 0.2);
+    background-color: white;
+    max-width: 430px;
+    border-radius: 20px;
 }
-
 
 .slide__choose-sex{
     
@@ -184,12 +191,13 @@
 
     & p{
         font-family: "Nunito Sans Regular";
-        font-size: 16px;
+        font-size: 17px;
         line-height: 25px;
     }
 
     & span{
         display: block;
+        font-size: 17px;
         padding: 36px 0 24px;
     }
 
@@ -199,12 +207,10 @@
     display: flex;
     align-items: center;
     gap: 1px;
-    width: 100%;
 
     & button{
         @extend %button-for-sign-up;
         padding: 10px 54px;
-        
     }
 
     & button[data-choose="man"]{
@@ -225,7 +231,6 @@
         line-height: 33px;
         width: max-content;
         margin-bottom: 25px;
-        
     }
 
     .choose{
@@ -242,6 +247,7 @@
         padding: 14px 15px 16px 16px;
         border-radius: 12px;
         background: rgb(250, 251, 252);
+        transition: opacity 1s;
     }
 
     .toggle-info{
@@ -250,16 +256,16 @@
         gap: 12px;
     }
 
-    .toggle-elemet{
+    .toggle-element{
         @extend %toggle-checkbox;
-                
+        &__cirlce{ z-index: 1; }
     }
 
     .next{
         @extend %button-for-sign-up;
     }
+
     
 }
-
 
 

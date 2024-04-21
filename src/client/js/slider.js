@@ -1,40 +1,35 @@
-const $dialog = document.querySelector("#modal-signUp");
+const $dialog = $("#modal-signUp");
 const $signUpOpenModal = $("#signup");
 const $signUpCloseModal = $("#close-modal");
-const $toggleCheckbox = document.querySelectorAll("input[type='checkbox']");
+const $toggleElement = $(".toggle-element__cirlce");
 
 
 $signUpOpenModal.click(() => {
     $('body').css('overflow','hidden')
-    $dialog.showModal()
+    $dialog.css("visibility", "visible")
 })
 
 $signUpCloseModal.click(() => {
-    
     $('body').css('overflow','visible')
-    $dialog.close()
+    $dialog.css("visibility", "hidden")
 })
 
-$toggleCheckbox.forEach((e) => {
+$(".toggle-element").click((e) => {
+    const [circle, checkbox] = Array.from(e.currentTarget.children);
+
+    $(circle).toggleClass("animation-toggle");
+    $(checkbox).attr("checked", true);
+
+    $(circle.parentElement).animate({ opacity : 1 },700);
+    $(circle.parentElement).css("backgroundColor", "#FF4460");
     
-   $(e).click(() => {
-
-    $(e).toggleClass("checked")
-
-    if($(e).hasClass("checked")){
+    if(!$(circle).hasClass("animation-toggle")){
         
-        $(".toggle-elemet__cirlce").toggleClass("animation-toggle");
-        $(".toggle-elemet__cirlce").removeClass("animation-toggle-back");
-
-        if(!$(".toggle-elemet__cirlce").hasClass("animation-toggle")){
-
-            $(".toggle-elemet__cirlce").removeClass("animation-toggle");
-            $(".toggle-elemet__cirlce").toggleClass("animation-toggle-back");
-        }
+        $(circle.parentElement).css("backgroundColor", "rgb(179, 186, 207)");
+        $(circle.parentElement).animate({ opacity : 0.3 },700);
+        $(checkbox).attr("checked", false);
     }
-
-   })
-    
 })
+
 
 

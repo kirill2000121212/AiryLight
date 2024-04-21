@@ -1,6 +1,7 @@
 @import "./fonts";
 @import "./reset";
 @import "./variables";
+@import "./animation";
 
 .container {
     max-width: 1290px;
@@ -98,7 +99,7 @@
 }
 
 #modal-signUp {
-    height: 320px;
+    // min-height: 230px;
     border: none;
     border-radius: 20px;
     box-shadow: 0px 10px 50px 0px rgba(179, 186, 207, 0.2);
@@ -106,7 +107,7 @@
     outline: none;
     position: relative;
     overflow: hidden;
-
+    padding: 0;
 }
 
 #modal-signUp::backdrop {
@@ -147,26 +148,27 @@
 }
 
 .slick-list{
-    display: flex;
+    overflow: hidden;
 }
 
-.slick-current{
-    max-width: 369px;
-}
 
 .slick-track{
     max-width: 370px;
     will-change: transform;
-    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
 }
 
 
 .modal-signUp__slick{
     display: flex;
     flex-direction: column-reverse;
-    max-height: 258px;
+    padding: 30px;
     gap: 40px;
+    min-width: 0;
 }
+
 
 .slide__choose-sex{
     
@@ -196,19 +198,13 @@
 .button-container{
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 1px;
     width: 100%;
 
     & button{
-        color: rgb(255, 255, 255);
-        font-family: "Nunito Sans Regular";
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
+        @extend %button-for-sign-up;
         padding: 10px 54px;
-        background: rgb(255, 68, 96);
-        border: none;
+        
     }
 
     & button[data-choose="man"]{
@@ -219,3 +215,51 @@
         border-radius: 0 12px 12px 0;
     }
 }
+
+.slide__who-find{
+
+    & p:first-child{
+        color: rgb(4, 36, 43);
+        font-family: "Nunito Sans Bold";
+        font-size: 24px;
+        line-height: 33px;
+        width: max-content;
+        margin-bottom: 25px;
+        
+    }
+
+    .choose{
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .toggle-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 15px 16px 16px;
+        border-radius: 12px;
+        background: rgb(250, 251, 252);
+    }
+
+    .toggle-info{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .toggle-elemet{
+        @extend %toggle-checkbox;
+                
+    }
+
+    .next{
+        @extend %button-for-sign-up;
+    }
+    
+}
+
+
+

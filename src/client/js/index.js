@@ -8,10 +8,12 @@ $(".modal-signUp__slick").slick({
     infinite : false,
     slidesToShow : 1,
     slidesToScroll : 1,
-    speed : 600,
+    speed : 350,
     dots : true,
     fade : true,
     prevArrow : false,
     nextArrow : false,
-    cssEase: 'linear'
+    adaptiveHeight : true,
+    cssEase: 'linear',
+    // draggable : true || false // листать ли с зажатия.. swipe для мобилы
 });

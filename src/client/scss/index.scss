@@ -80,6 +80,7 @@
         position: fixed;
         width: 100%;
         gap: 860px;
+        z-index: 100;
     }
 
     &-top__logo {
@@ -120,9 +121,7 @@
     }
 
     &-bottom__title {
-        font-family: "Druk-Medium";
-        font-size: 50px;
-        line-height: 50px;
+        @extend %title-text;
         padding-bottom: 68px;
     }
 
@@ -149,10 +148,7 @@
     background-size: contain;
 
     &__title {
-
-        font-family: "Druk-Medium";
-        font-size: 50px;
-        line-height: 50px;
+        @extend %title-text;
         color: rgb(255, 255, 255);
         padding-bottom: 64px;
         padding-top: 210px;
@@ -171,9 +167,7 @@
     height: 100vh;
 
     &__title {
-        font-family: "Druk-Medium";
-        font-size: 50px;
-        line-height: 50px;
+        @extend %title-text;
         padding-bottom: 74px;
         padding-top: 210px;
     }
@@ -199,9 +193,7 @@
     }
 
     &__title {
-        font-family: "Druk-Medium";
-        font-size: 50px;
-        line-height: 50px;
+        @extend %title-text;
         padding-bottom: 74px;
     }
 
@@ -227,6 +219,164 @@
         right: -305px;
         bottom: -240px;
         transform: scale(.8);
+    }
+
+}
+
+.pay {
+    height: 100vh;
+
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__left {
+        background-color: rgb(217, 217, 217);
+        height: 100vh;
+        width: 710px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            background-image: url("../images/girl.png");
+            position: absolute;
+            left: -305px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        @extend %title-text;
+        font-size: 24px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 680px;
+        margin: 0 auto;
+        max-width: 313px;
+    }
+
+    &__right {
+        padding-top: 210px;
+        padding-left: 140px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__text {
+        font-family: "Nunito Sans Bold";
+        font-size: 24px;
+        line-height: 33px;
+        padding-bottom: 2px;
+    }
+
+    &__text--2 {
+        font-family: "Nunito Sans Bold";
+        font-size: 20px;
+        line-height: 24px;
+        @extend %title-gradient;
+        padding-bottom: 24px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__list-item {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
+
+    &__list-text {
+        font-family: "Nunito Sans Regular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &__price-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 40px;
+        padding-bottom: 55px;
+    }
+
+    &__price-list-item {
+        background-color: rgb(250, 251, 252);
+        border-radius: 12px;
+        padding: 14px 15px 16px;
+    }
+
+    &__price-list-item-box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__inner {
+        max-width: 370px;
+    }
+
+    &__price-list-item-box-text {
+        font-family: "Nunito Sans SemiBold";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    &__price-list-item-box-text-2 {
+        color: rgb(145, 154, 182);
+        font-family: "Nunito Sans Regular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &__price-list-item-box-text-2--red {
+        color: rgb(255, 68, 96);
+        font-family: "Nunito Sans Regular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &__price-list-item-box-2 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__btn {
+        width: 370px;
+        height: 50px;
+        border-radius: 12px;
+        background-color: rgb(255, 68, 96);
+        border: none;
+        color: white;
+        font-family: "Nunito Sans SemiBold";
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
     }
 
 }

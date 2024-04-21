@@ -20,8 +20,6 @@
 }
 
 
-
-
 #modal-signUp-container{
     position: relative;
 }
@@ -289,6 +287,72 @@
     }
 
     & button{
+        @extend %button-for-sign-up;
+    }
+}
+
+.slide__important-documents{
+
+    color: rgb(4, 36, 43);
+    font-family: "Nunito Sans Regular";
+
+    & p{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    & strong{
+        line-height: 25px;
+        margin-bottom: 37px;
+        display: block;
+    }
+
+    .document-container{
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        background: rgb(250, 251, 252);
+        padding: 15px 15px 13px 18px;
+        margin-bottom: 20px;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            height: 1px;
+            background: rgb(236, 239, 248);
+            left: 0;
+            right: 0;
+            top: 50%;
+        }
+    }
+
+    .document-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .document-item:first-child{
+        padding-bottom: 15px;
+    }
+
+    .document-item:last-child{
+        padding-top: 15px;
+    }
+
+    .document-info{
+        display: flex;
+        gap: 13px;
+        align-items: center
+    }
+
+    & button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
         @extend %button-for-sign-up;
     }
 }

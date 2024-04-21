@@ -25,9 +25,10 @@
                         Меню
                     </li>
                 </ul>
-                <div id="modal-signUp">
+                <div id="modal-signUp" role="dialog" aria-modal="true">
 
                     <div id="modal-signUp-container">
+
                         <div class="modal-signUp__slick">
 
                             <div class="slide__choose-sex">
@@ -38,7 +39,7 @@
                                 <span>
                                     Расскажите, кто вы?
                                 </span>
-                                <div class="button-container" role="choose-sex">
+                                <div class="button-container">
     
                                     <button data-choose="man">
                                         Мужчина
@@ -87,12 +88,39 @@
                                 </button>
                             </div>
     
-                            <div>
-    
+                            <div class="slide__choose-name">
+                                <p>
+                                    Как вас зовут?
+                                </p>
+
+                                <div class="input-container">
+                                    <input id="name" name="name" type="text" minlength="1" required>
+                                    <label for="name">Ваше имя</label>
+                                </div>
+
+                                <button>
+                                    Далее
+                                </button>
                             </div>
-                            <div>
-    
+
+                            <div class="slide__happybirthday">
+                                <p>
+                                    Когда у вас день рождения?
+                                </p>
+
+                                <div class="happybirthday__input-container">
+                                    <input id="text-date" type="text" required minlength="6">
+                                    <div id="date">
+                                        <input name="date" type="date" required datepicker>
+                                    </div>
+                                    <label for="text-date">Выберите дату</label>
+                                </div>
+
+                                <button>
+                                    Далее
+                                </button>
                             </div>
+
                             <div>
     
                             </div>

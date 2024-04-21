@@ -5,13 +5,14 @@ const $toggleElement = $(".toggle-element__cirlce");
 
 
 $signUpOpenModal.click(() => {
-    $('body').css('overflow','hidden')
-    $dialog.css("visibility", "visible")
+    $('body').css('overflow','hidden');
+    $dialog.css("visibility", "visible");
 })
+
 
 $signUpCloseModal.click(() => {
     $('body').css('overflow','visible')
-    $dialog.css("visibility", "hidden")
+    $dialog.css("visibility", "hidden");
 })
 
 $(".toggle-element").click((e) => {
@@ -29,6 +30,13 @@ $(".toggle-element").click((e) => {
         $(circle.parentElement).animate({ opacity : 0.3 },700);
         $(checkbox).attr("checked", false);
     }
+})
+
+
+$("input[type='date']").on("change", (e) => {
+    let valueDate = e.currentTarget.value
+        .split("-").reverse().join(".");
+    $("#text-date").val(valueDate);
 })
 
 

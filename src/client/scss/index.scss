@@ -156,8 +156,8 @@
 
     &__text {
         color: rgb(255, 255, 255);
-        font-family: "Nunito Sans Light";
-        font-size: 20px;
+        font-family: "Nunito Sans Regular";
+        font-size: 22px;
         line-height: 30px;
         width: 466px;
     }
@@ -173,8 +173,8 @@
     }
 
     &__text {
-        font-family: "Nunito Sans Light";
-        font-size: 20px;
+        font-family: "Nunito Sans Regular";
+        font-size: 22px;
         line-height: 30px;
         width: 466px;
         padding-bottom: 43px;
@@ -198,8 +198,8 @@
     }
 
     &__text {
-        font-family: "Nunito Sans Light";
-        font-size: 20px;
+        font-family: "Nunito Sans Regular";
+        font-size: 22px;
         line-height: 30px;
         width: 466px;
         padding-bottom: 43px;
@@ -379,4 +379,49 @@
         cursor: pointer;
     }
 
+}
+
+.partner {
+    height: 100vh;
+    background: linear-gradient(110deg, rgb(0, 0, 0), rgb(66, 66, 71));
+
+    &__wrapper {
+        background-image: url("../images/hands.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: inherit;
+        background-size: contain;
+    }
+
+    &__title {
+        @extend %title-text;
+        color: rgb(255, 255, 255);
+        padding: 210px 0 59px;
+    }
+
+    &__text {
+        color: rgb(255, 255, 255);
+        font-family: "Nunito Sans Regular";
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 30px;
+        width: 466px;
+        padding-bottom: 36px;
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    &__copyright {
+        color: rgb(179, 186, 207);
+        font-family: "Nunito Sans Light";
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        gap: 20px;
+    }
 }

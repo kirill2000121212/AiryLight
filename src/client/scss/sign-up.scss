@@ -183,7 +183,7 @@
     }
 
     input[name="name"]{
-        padding: 34px 0 16px 15px;
+        padding: 34px 42px 16px 15px;
         border-radius: 12px;
         background: rgb(250, 251, 252);
         color: rgb(4, 36, 43);
@@ -213,12 +213,12 @@
 
     input[name="name"]:focus ~ label{
         font-size: 11px;
-        transform: translateY(-8px);
+        transform: translateY(-12px);
     }
 
     input[name="name"]:not(:focus):valid ~ label{
         font-size: 11px;
-        transform: translateY(-8px);
+        transform: translateY(-12px);
     }
 
     & button{
@@ -242,7 +242,7 @@
     }
 
     #text-date{
-        padding: 34px 0 16px 15px;
+        padding: 34px 42px 16px 15px;
         border-radius: 12px;
         background: rgb(250, 251, 252);
         color: rgb(4, 36, 43);
@@ -253,12 +253,12 @@
 
     #text-date:focus ~ label{
         font-size: 11px;
-        transform: translateY(-8px);
+        transform: translateY(-12px);
     }
 
     #text-date:not(:focus):valid ~ label{
         font-size: 11px;
-        transform: translateY(-8px);
+        transform: translateY(-12px);
     }
 
     #date{
@@ -353,6 +353,102 @@
         align-items: center;
         width: 100%;
         margin: 0 auto;
+        @extend %button-for-sign-up;
+    }
+}
+
+.slide__sign-up{
+
+    color: rgb(4, 36, 43);
+    font-family: "Nunito Sans Regular";
+
+    & p{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    & strong{
+        display: block;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+
+    & form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-item{
+        position: relative;
+        border-radius: 12px;
+        background: rgb(250, 251, 252);
+    }
+
+    .form-item-input{
+        padding: 34px 42px 16px 15px;
+        border-radius: 12px;
+        background: rgb(250, 251, 252);
+        color: rgb(4, 36, 43);
+        font-size: 16px;
+        transition: transform 600ms;
+    }
+
+    .pass-icon{
+        position: absolute;
+        right: 14px;
+        top: 25px;
+        cursor: pointer;
+    }
+    
+
+    & label{
+        display: inline-block;
+        position: absolute;
+        color: rgb(145, 154, 182);
+        font-family: inherit;
+        left: 15px;
+        top: 33%;
+        transition: 600ms;
+        pointer-events: none;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .form-item-input:focus ~ label{
+        font-size: 11px;
+        transform: translateY(-12px)
+    }
+
+    .form-item-input:not(:focus):user-invalid ~ label{
+        font-size: 11px;
+        transform: translateY(-12px)
+    }
+
+    & button{
+        @extend %button-for-sign-up;
+    }
+}
+
+.slide__thanks-for{
+    color: rgb(4, 36, 43);
+    font-family: "Nunito Sans Regular";
+    
+
+    & p{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    & strong{
+        display: block;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 39px;
+    }
+
+    & button{
         @extend %button-for-sign-up;
     }
 }

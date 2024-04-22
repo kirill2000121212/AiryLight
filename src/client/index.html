@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AiryLight</title>
+    <link rel="preload" href="./images/show-password-eye.svg" as="image">
 </head>
 
 <body>
@@ -41,11 +42,11 @@
                                 </span>
                                 <div class="button-container">
     
-                                    <button data-choose="man">
+                                    <button role="next-slide" data-choose="man">
                                         Мужчина
                                     </button>
     
-                                    <button data-choose="girl">
+                                    <button role="next-slide" data-choose="girl">
                                         Женщина
                                     </button>
     
@@ -67,7 +68,7 @@
     
                                         <div class="toggle-element">
                                             <div class="toggle-element__cirlce"></div>
-                                            <input type="checkbox">
+                                            <input type="checkbox" data-choose="relationship">
                                         </div>
                                     </div>
                                     <div class="toggle-item">
@@ -79,11 +80,11 @@
     
                                         <div class="toggle-element">
                                             <div class="toggle-element__cirlce"></div>
-                                            <input type="checkbox">
+                                            <input type="checkbox" data-choose="friendship">
                                         </div>
                                     </div>
                                 </div>
-                                <button class="next">
+                                <button role="next-slide" class="next">
                                     Далее
                                 </button>
                             </div>
@@ -98,7 +99,7 @@
                                     <label for="name">Ваше имя</label>
                                 </div>
 
-                                <button>
+                                <button role="next-slide">
                                     Далее
                                 </button>
                             </div>
@@ -116,7 +117,7 @@
                                     <label for="text-date">Выберите дату</label>
                                 </div>
 
-                                <button>
+                                <button role="next-slide">
                                     Далее
                                 </button>
                             </div>
@@ -151,8 +152,76 @@
 
                                 </div>
 
-                                <button>
+                                <button role="next-slide">
                                     Продолжить
+                                </button>
+                            </div>
+
+                            <div class="slide__sign-up">
+                                <p>
+                                    Ваши данные
+                                </p>
+
+                                <strong>
+                                    Установите уникальный сложный пароль, 
+                                    используйте любую комбинацию латинских букв, цифр и других символов
+                                </strong>
+
+                                <form method="post">
+
+                                    <div class="form-item">
+                                        <input class="form-item-input"
+                                            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                                            minlength="1" 
+                                            type="email" 
+                                            name="email" 
+                                            required>
+                                        <label role="placeholder">Ваша почта</label>
+                                    </div>
+
+                                    <div class="form-item">
+                                        <input class="form-item-input"
+                                            pattern=""
+                                            minlength="1" 
+                                            type="password" 
+                                            name="password" 
+                                            required>
+                                        <label role="placeholder">Придумайте пароль</label>
+                                        <img class="pass-icon" src="./images/hide-password-eye.svg" alt="eye-password">
+                                    </div>
+
+                                    <div class="form-item">
+                                        <input class="form-item-input"
+                                            pattern=""
+                                            minlength="1" 
+                                            type="password" 
+                                            name="repeat_password" 
+                                            required>
+                                        <label role="placeholder">Повторите этот пароль</label>
+                                        <img class="pass-icon" src="./images/hide-password-eye.svg" alt="eye-password">
+                                    </div>
+
+                                    <button role="next-slide">
+                                        Далее
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div class="slide__thanks-for">
+                                <p>
+                                    Спасибо за регистрацию!
+                                </p>
+
+                                <strong>
+                                    Мы отправили на указанную почту
+                                    dencreate@gmail.com ссылкe для
+                                    подтверждения аккаунта, просьба
+                                    пройти по нему и активировать
+                                    аккаунт
+                                </strong>
+
+                                <button class="end-slider">
+                                    Отправить ещё раз
                                 </button>
                             </div>
                                 

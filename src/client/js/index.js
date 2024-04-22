@@ -12,8 +12,16 @@ $(".modal-signUp__slick").slick({
     dots : true,
     fade : true,
     prevArrow : false,
-    nextArrow : false,
+    nextArrow : true,
     adaptiveHeight : true,
     cssEase: 'linear',
-    draggable : false 
-});
+    draggable : false,
+    nextArrow : $("button[role='next-slide']"),
+})
+.on("afterChange", (_, __, index) => {
+    
+    if(index >= $(".slick-track > div").length - 2){
+        
+        $(".slick-dots > li:last-child").addClass("slick-active");
+    }
+})

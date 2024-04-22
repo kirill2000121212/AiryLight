@@ -2,6 +2,22 @@
 @import "./reset";
 @import "./variables";
 
+section {
+    position: relative;
+}
+
+.scroll-container{
+    scroll-behavior: smooth;
+}
+
+header> .arrow__g ,
+section> .arrow__g {
+    position: absolute;
+    bottom: 30px;
+    left: 200px;
+    cursor: pointer;
+}
+
 .title-gradient {
     @extend %title-gradient
 }
@@ -126,6 +142,15 @@
         line-height: 30px;
         width: 466px;
     }
+
+    & #Vector {
+        fill: rgb(250, 251, 252);
+    }
+
+    .arrow__g {
+        bottom: 20px;
+    }
+
 }
 
 .how-work {
@@ -185,7 +210,6 @@
         bottom: -240px;
         transform: scale(.8);
     }
-
 }
 
 .pay {
@@ -344,6 +368,14 @@
         cursor: pointer;
     }
 
+    & #Vector {
+        fill: rgb(250, 251, 252);
+    }
+
+    .arrow__g {
+        z-index: 2;
+    }
+
 }
 
 .partner {
@@ -372,6 +404,14 @@
         line-height: 30px;
         width: 466px;
         padding-bottom: 36px;
+    }
+
+    & #Vector {
+        fill: rgb(250, 251, 252);
+    }
+
+    .arrow {
+        transform: rotate(180deg);
     }
 }
 

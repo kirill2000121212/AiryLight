@@ -426,6 +426,11 @@
         transform: translateY(-12px)
     }
 
+    .form-item-input:not(:focus):user-valid ~ label{
+        font-size: 11px;
+        transform: translateY(-12px)
+    }
+
     & button{
         @extend %button-for-sign-up;
     }
@@ -449,6 +454,8 @@
     }
 
     & button{
+        width: 372px;
+        padding: 10px;
         @extend %button-for-sign-up;
     }
 }

@@ -1,14 +1,45 @@
 const $dialog = $("#modal-signUp");
 const $signUpOpenModal = $("#signup");
 const $signUpCloseModal = $("#close-modal");
-const $toggleElement = $(".toggle-element__cirlce");
+import 'jquery';
+import "slick-carousel";
+
+const $storageOfSelected = {};
+
+
+$(".modal-signUp__slick").slick({
+    infinite : false,
+    slidesToShow : 1,
+    slidesToScroll : 1,
+    speed : 400,
+    dots : true,
+    fade : true,
+    prevArrow : false,
+    nextArrow : true,
+    adaptiveHeight : true,
+    cssEase: 'linear',
+    draggable : false,
+    nextArrow : $("button[role='next-slide']"),
+})
+.on("afterChange", (_, __, index) => {
+    
+    if(index >= $(".slick-track > div").length - 2){
+        
+        $(".slick-dots > li:last-child").addClass("slick-active");
+    }
+    
+})
+
+
+$(() => {
+    $(".slick-dots > li:last-child").remove();
+    $(".slick-dots > li:last-child").remove();
+    $("li[role='presentation']").off("click");
+})
 
 $signUpOpenModal.click(() => {
     $('body').css('overflow','hidden');
     $dialog.css("visibility", "visible");
-    
-    $(".slick-dots > li").remove(".slick-dots > li:last-child");
-    $(".slick-dots > li").remove(".slick-dots > li:last-child");
 })
 
 
@@ -57,8 +88,19 @@ $(".pass-icon").on("click",(e) => {
         }
         $(e.currentTarget).attr("src", "images/hide-password-eye.svg")
         return "password"
-    });
-    
+    });  
 })
 
+$("button[role='next-slide']").on("click", (e) => {
+    const $$$ = e.currentTarget.closest(".slick-slide > div > div");
+
+    $($$$).each((_,curr) => {
+        
+        $(curr.children).each((_, c) => {
+            console.log(c);
+            console.log(c.hasAttribute("data-choose"));
+        })
+    })
+    console.log($$$.hasAttribute("data-choose"));
+})
 

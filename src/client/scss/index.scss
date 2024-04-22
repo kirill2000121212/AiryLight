@@ -1,6 +1,7 @@
 @import "./fonts";
 @import "./reset";
 @import "./variables";
+@import "./sign-up";
 
 #modal-signUp {
     max-width: 430px;
@@ -18,6 +19,7 @@
     backdrop-filter: blur(100px);
     background: rgba(255, 255, 255, 0.5);
 }
+
 
 
 .title-gradient {

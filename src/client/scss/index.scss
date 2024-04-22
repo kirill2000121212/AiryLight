@@ -19,23 +19,6 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
-.swiper-pagination__list {
-    display: flex;
-    gap: 5px;
-
-    &-item {
-        width: 64px;
-        height: 4px;
-        border-radius: 9px;
-        background: rgb(179, 186, 207);
-        opacity: 0.25;
-    }
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-}
 
 .title-gradient {
     @extend %title-gradient

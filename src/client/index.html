@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header__top">
-                <img class="header__top-logo" src="./images/logo.svg" alt="logo">
-                <ul class="header__top-list">
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <img class="header-top__logo" src="./images/logo.svg" alt="logo">
+                <ul class="header-top__list">
                     <li class="header-top__list-item">
                         <img class="list-item__img" src="./images/lock.svg" alt="lock">
                         Вход
@@ -26,59 +26,36 @@
                     </li>
                 </ul>
                 <dialog id="modal-signUp">
-
-
                 </dialog>
             </div>
-            <div class="header__bottom">
-                <div class="header__bottom-box">
-                    <h3 class="header__bottom-title">Революционный
-                        <br>способ <br><span class="header__bottom-title--gradient">знакомств</span>
+            <div class="header-bottom">
+                <div class="header-bottom__box">
+                    <h3 class="header-bottom__title">Революционный
+                        <br>способ <br><span class="title-gradient">знакомств</span>
                     </h3>
-                    <p class="header__bottom-text">Искусственный интеллект бесплатно подберет для вас пару или друзей и
+                    <p class="header-bottom__text">Искусственный интеллект бесплатно подберет для вас пару или друзей и
                         организует встречу в безопасном месте</p>
-                    <div class="header__bottom-btn">
-                        <button class="btn__left">
+                    <div class="header-bottom__btn">
+                        <button class="btn-left">
                             Хочу попробовать
                             <img src="./images/try-icon.svg" alt="try-icon">
                         </button>
-                        <button class="btn__right">
+                        <button class="btn-right">
                             Как это работает?
                             <img src="./images/how-work-arrow.svg" alt="how-work-arrow">
                         </button>
                     </div>
-                    <img class="arrow all-arrow" src="./images/how-work-arrow.svg" alt="how-work-arrow">
                 </div>
-                <img class="header__bottom-phone" src="./images/header-phone.png" alt="header-phone">
-                <img class="header__bottom-img" src="./images/header-img.png" alt="header-img">
+                <img class="header-bottom__phone" src="./images/header-phone.png" alt="header-phone">
+                <img class="header-bottom__img" src="./images/header-img.png" alt="header-img">
             </div>
-    </div>
+        </div>
     </header>
     <main class="main">
         <section class="your-man">
             <div class="container">
-                <div class="header__top">
-                    <img class="header__top-logo" src="./images/logo.svg" alt="logo">
-                    <ul class="header__top-list">
-                        <li class="header-top__list-item">
-                            <img class="list-item__img" src="./images/lock.svg" alt="lock">
-                            Вход
-                        </li>
-                        <li id="signup" class="header-top__list-item">
-                            Регистрация
-                        </li>
-                        <li class="header-top__list-item">
-                            <img class="list-item__img" src="./images/menu.svg" alt="menu">
-                            Меню
-                        </li>
-                    </ul>
-                    <dialog id="modal-signUp">
-
-
-                    </dialog>
-                </div>
                 <h3 class="your-man__title">
-                    Найти «своего»<br><span class="your-man__title-color">человека</span>
+                    Найти «своего»<br><span class="title-gradient">человека</span>
                 </h3>
                 <p class="your-man__text">Вы считали, сколько времени и денег вы тратите, чтобы найти «своего»
                     человека?<br><br>
@@ -86,50 +63,144 @@
                     Сколько свиданий заканчивается глубокими отношениями? Пять? Десять? Больше?<br>
                     Каждое свидание — это несколько часов и тысячи рублей на подготовку, дорогу и общение.
 
-                    <br><br>Мы нашли решение, как при помощи искусственного интеллекта сделать так,<br> чтобы вы нашли
+                    <br><br>Мы нашли решение, как при помощи искусственного интеллекта сделать так,<br> чтобы вы
+                    нашли
                     интересного
                     вам человека сразу.
                 </p>
-                <img class="your-man__arrow all-arrow" src="./images/arrow-white.svg" alt="arrow-white">
             </div>
         </section>
         <section class="how-work">
             <div class="container">
-                <div class="header__top">
-                    <img class="header__top-logo" src="./images/logo.svg" alt="logo">
-                    <ul class="header__top-list">
-                        <li class="header-top__list-item">
-                            <img class="list-item__img" src="./images/lock.svg" alt="lock">
-                            Вход
-                        </li>
-                        <li id="signup" class="header-top__list-item">
-                            Регистрация
-                        </li>
-                        <li class="header-top__list-item">
-                            <img class="list-item__img" src="./images/menu.svg" alt="menu">
-                            Меню
-                        </li>
-                    </ul>
-                    <dialog id="modal-signUp">
-
-
-                    </dialog>
-                </div>
                 <h3 class="how-work__title">
-                    Как все это<span>работает</span>
+                    Как все это<span class="title-gradient"><br>работает</span>
                 </h3>
                 <p class="how-work__text">
                     Давайте я расскажу вам, как искусственный интеллект Айри находит людей, с которыми вам будет
                     интересно и делает первое свидание безопасным
 
                 </p>
-                <button class="btn__left">
+                <button class="btn-left">
                     Хочу попробовать
                     <img src="./images/try-icon.svg" alt="try-icon">
                 </button>
             </div>
         </section>
+        <section class="activity">
+            <div class="container">
+                <div class="activity__wrapper">
+                    <div class="activity__left">
+                        <h3 class="activity__title">
+                            Больше<span class="title-gradient"><br>активности</span>
+                        </h3>
+                        <p class="activity__text">
+                            Пройдя тесты ты можешь не только знакомиться с людьми, но и ходить на разные мероприятия
+                            по
+                            выбранным интересам: на концерты, в бар в отличной компании, на спортивные мероприятия,
+                            на встречи с
+                            известными людьми и многое другое
+                        </p>
+                        <button class="btn-left">
+                            Хочу попробовать
+                            <img src="./images/try-icon.svg" alt="try-icon">
+                        </button>
+                    </div>
+                    <div class="activity__right">
+                        <h3>Творческие <br>мероприятия</h3>
+                        <img class="activity__right-img" src="./images/debili.png" alt="debili">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pay">
+            <div class="pay__wrapper">
+                <div class="pay__left">
+                    <h3 class="pay__title">А так я получается<br><span class="title-gradient">экономлю</span></h3>
+                </div>
+                <div class="pay__right">
+                    <div class="pay__inner">
+                        <div class="pay__box">
+                            <p class="pay__text">Обычный</p>
+                            <img src="./images/plus.svg" alt="plus" width="19" height="12">
+                        </div>
+                        <p class="pay__text--2">Сэкономьте до 30%<br>
+                            при переходе на этот тариф</p>
+                        <ul class="pay__list">
+                            <li class="pay__list-item">
+                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                    height="9.5">
+                                <p class="pay__list-text">Пробный период 1 месяц бесплатно</p>
+                            </li>
+                            <li class="pay__list-item">
+                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                    height="9.5">
+                                <p class="pay__list-text">Находите людей со 100% совместимостью</p>
+                            </li>
+                            <li class="pay__list-item">
+                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                    height="9.5">
+                                <p class="pay__list-text">Запретите видеться себя геолокации </p>
+                            </li>
+                            <li class="pay__list-item">
+                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                    height="9.5">
+                                <p class="pay__list-text">Скройтесь ото всех</p>
+                            </li>
+                        </ul>
+                        <ul class="pay__price-list">
+                            <li class="pay__price-list-item">
+                                <div class="pay__price-list-item-box">
+                                    <span class="pay__price-list-item-box-text">1 месяц</span>
+                                    <span class="pay__price-list-item-box-text">700 ₽</span>
+                                </div>
+                            </li>
+                            <li class="pay__price-list-item">
+                                <div class="pay__price-list-item-box">
+                                    <span class="pay__price-list-item-box-text">6 месяцев</span>
+                                    <span class="pay__price-list-item-box-text">3 360 ₽</span>
+                                </div>
+                                <span class="pay__price-list-item-box-text-2">560 ₽ / месяц — экономия 20%</span>
+                            </li>
+                            <li class="pay__price-list-item">
+                                <div class="pay__price-list-item-box">
+                                    <span class="pay__price-list-item-box-text">12 месяцев</span>
+                                    <span class="pay__price-list-item-box-text">5 880 ₽</span>
+                                </div>
+                                <div class="pay__price-list-item-box-2">
+                                    <span class="pay__price-list-item-box-text-2">490 ₽ / месяц — экономия 30%</span>
+                                    <del class="pay__price-list-item-box-text-2--red">8400 ₽</del>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="pay__btn">
+                            Выбрать тариф
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partner">
+            <div class="partner__wrapper">
+                <div class="container">
+                    <h3 class="partner__title">Найдите свою<br><span class="title-gradient">пару</span></h3>
+                    <p class="partner__text">А если вам не понравится первая встреча, вы всегда можете найти для себя
+                        нового
+                        знакомого.</p>
+                    <button class="btn-left">
+                        Хочу попробовать
+                        <img src="./images/try-icon.svg" alt="try-icon">
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__copyright">
+            <span> © Айри, 2023 г.</span>
+            <span>Все права защищены.</span>
+            <span>help@ayiri.ru</span>
+        </div>
+    </footer>
 </body>
 
 </html>

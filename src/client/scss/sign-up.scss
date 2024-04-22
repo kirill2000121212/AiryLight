@@ -16,9 +16,9 @@
     outline: none;
     overflow: hidden;
     padding: 0;
-
+    height: 100vh;
+    z-index: 101;
 }
-
 
 #modal-signUp-container{
     position: relative;
@@ -81,19 +81,18 @@
 }
 
 .slide__choose-sex{
-    
+    color: rgb(4, 36, 43);
+    font-family: "Nunito Sans Regular";
+
     & b{
-        color: rgb(4, 36, 43);
-        font-family: "Nunito Sans Bold";
         font-size: 24px;
-        font-weight: 700;
         line-height: 33px;
         display: block;
         margin-bottom: 30px;
+        font-family: "Nunito Sans Bold";
     }
 
     & p{
-        font-family: "Nunito Sans Regular";
         font-size: 17px;
         line-height: 25px;
     }
@@ -126,14 +125,15 @@
 }
 
 .slide__who-find{
+    color: rgb(4, 36, 43);
+    font-family: "Nunito Sans Regular";
 
     & p:first-child{
-        color: rgb(4, 36, 43);
-        font-family: "Nunito Sans Bold";
         font-size: 24px;
         line-height: 33px;
         width: max-content;
         margin-bottom: 25px;
+        font-family: "Nunito Sans Bold";
     }
 
     .choose{
@@ -173,11 +173,11 @@
 
 
 .slide__choose-name{
+    color: rgb(4, 36, 43);
+    font-family: "Nunito Sans Bold";
     
     & p{
         margin-bottom: 25px;
-        color: rgb(4, 36, 43);
-        font-family: "Nunito Sans Bold";
         font-size: 24px;
         line-height: 33px;
     }

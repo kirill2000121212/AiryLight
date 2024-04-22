@@ -95,7 +95,7 @@ $("button[role='next-slide']").on("click", (e) => {
     const $$$ = e.currentTarget.closest(".slick-slide > div > div");
     $(e.currentTarget).attr("data-active", true);
     
-    console.log(findChilrenHasAttribute($$$,"data-active"))
+    // console.log(findChilrenHasAttribute($$$,"data-active"))
     // console.log($$$.hasAttribute("data-choose"));
 })
 

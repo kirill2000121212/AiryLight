@@ -93,14 +93,21 @@ $(".pass-icon").on("click",(e) => {
 
 $("button[role='next-slide']").on("click", (e) => {
     const $$$ = e.currentTarget.closest(".slick-slide > div > div");
-
-    $($$$).each((_,curr) => {
-        
-        $(curr.children).each((_, c) => {
-            console.log(c);
-            console.log(c.hasAttribute("data-choose"));
-        })
-    })
-    console.log($$$.hasAttribute("data-choose"));
+    $(e.currentTarget).attr("data-active", true);
+    
+    console.log(findChilrenHasAttribute($$$,"data-active"))
+    // console.log($$$.hasAttribute("data-choose"));
 })
 
+function findChilrenHasAttribute(parent, currentAttribute){
+
+    if(parent.hasAttribute(currentAttribute)){
+        return parent.attr("data-choose");
+    }else{
+        $(parent).each((_,c) => {
+            
+           return findChilrenHasAttribute(c, currentAttribute)
+        })
+    }
+
+}

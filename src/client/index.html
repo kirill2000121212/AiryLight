@@ -27,11 +27,11 @@
                         </span>
                         <div class="button-container">
 
-                            <button role="next-slide" data-choose="sex man">
+                            <button role="next-slide" data-choose="man">
                                 Мужчина
                             </button>
 
-                            <button role="next-slide" data-choose="sex girl">
+                            <button role="next-slide" data-choose="girl">
                                 Женщина
                             </button>
 
@@ -54,7 +54,7 @@
 
                                 <div class="toggle-element">
                                     <div class="toggle-element__cirlce"></div>
-                                    <input type="checkbox" data-choose="search relationship">
+                                    <input type="checkbox" data-choose="relationship">
                                 </div>
                             </div>
                             <div class="toggle-item">
@@ -66,7 +66,7 @@
 
                                 <div class="toggle-element">
                                     <div class="toggle-element__cirlce"></div>
-                                    <input type="checkbox" data-choose="search friendship">
+                                    <input type="checkbox" data-choose="friendship">
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,8 @@
                         </p>
 
                         <div class="input-container">
-                            <input 
+                            <input
+                                pattern="\w" 
                                 id="name" 
                                 name="name" 
                                 type="text"
@@ -102,7 +103,12 @@
                         </p>
 
                         <div class="happybirthday__input-container">
-                            <input id="text-date" type="text" data-choose="date" required minlength="6">
+                            <input  
+                                id="text-date"   
+                                type="text"   
+                                data-choose="date"    
+                                required   
+                                minlength="6">
                             <div id="date">
                                 <input name="date" type="date" required datepicker>
                             </div>
@@ -159,7 +165,7 @@
                             используйте любую комбинацию латинских букв, цифр и других символов
                         </strong>
 
-                        <form method="post">
+                        <form id="form-signUp" method="post">
 
                             <div class="form-item">
                                 <input class="form-item-input"
@@ -172,6 +178,7 @@
 
                             <div class="form-item">
                                 <input class="form-item-input"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                     minlength="1" 
                                     type="password" 
                                     name="password" 
@@ -182,6 +189,7 @@
 
                             <div class="form-item">
                                 <input class="form-item-input"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                     minlength="1" 
                                     type="password" 
                                     name="repeat_password" 
@@ -190,7 +198,7 @@
                                 <img class="pass-icon" src="./images/hide-password-eye.svg" alt="eye-password">
                             </div>
 
-                            <button role="next-slide" type="submit">
+                            <button type="submit">
                                 Далее
                             </button>
                         </form>

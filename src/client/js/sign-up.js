@@ -25,6 +25,7 @@ $(".modal-signUp__slick").slick({
     if(index >= $(".slick-track > div").length - 2){
         $(".slick-dots > li:last-child").addClass("slick-active");
     }
+    console.log(cacheData);
 })
 
 
@@ -124,7 +125,7 @@ $("form[method='post']").on("submit", (e) => {
     e.preventDefault();
     const formData = new FormData();
     const valRepeat = $("input[name='repeat_password']").val();
-    //123EW#@e2@Rwe
+    
     $("form[method='post']").find('input').each((i,e) => {
 
         const repeatPasswordField = valRepeat === e.value;
@@ -134,13 +135,13 @@ $("form[method='post']").on("submit", (e) => {
         }
 
         if(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(e.value.trim()) && repeatPasswordField){
-            console.log('пароли совпадают');
             formData[i] = e.value;
         }
 
-        
     })
-    console.log(formData);
     
+},(e) => {
+    e.preventDefault();
+    $(".modal-signUp__slick")
 })
 

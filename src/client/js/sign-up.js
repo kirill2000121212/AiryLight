@@ -4,8 +4,7 @@ const $signUpCloseModal = $("#close-modal");
 import 'jquery';
 import "slick-carousel";
 
-const $storageOfSelected = {};
-
+let cacheData;
 
 $(".modal-signUp__slick").slick({
     infinite : false,
@@ -24,10 +23,8 @@ $(".modal-signUp__slick").slick({
 .on("afterChange", (_, __, index) => {
     
     if(index >= $(".slick-track > div").length - 2){
-        
         $(".slick-dots > li:last-child").addClass("slick-active");
     }
-    
 })
 
 
@@ -53,6 +50,7 @@ $(".toggle-element").click((e) => {
 
     $(circle).toggleClass("animation-toggle");
     $(checkbox).attr("checked", true);
+    $(checkbox).attr("data-active", true);
 
     $(circle.parentElement).animate({ opacity : 1 },700);
     $(circle.parentElement).css("backgroundColor", "#FF4460");
@@ -62,6 +60,7 @@ $(".toggle-element").click((e) => {
         $(circle.parentElement).css("backgroundColor", "rgb(179, 186, 207)");
         $(circle.parentElement).animate({ opacity : 0.3 },700);
         $(checkbox).attr("checked", false);
+        $(checkbox).attr("data-active", false);
     }
 })
 
@@ -71,11 +70,13 @@ $("input[type='date']").on("change", (e) => {
         .split("-").reverse().join(".");
     $("#text-date").val(valueDate);
     $("#text-date").attr("data-choose", valueDate);
+    $("#text-date").attr("data-active", true);
 })
 
 $("#name").on("change", (e) => {
     let valueDate = e.currentTarget.value;
     $("#name").attr("data-choose", valueDate);
+    $("#name").attr("data-active", true);
 })
 
 
@@ -91,23 +92,55 @@ $(".pass-icon").on("click",(e) => {
     });  
 })
 
-$("button[role='next-slide']").on("click", (e) => {
-    const $$$ = e.currentTarget.closest(".slick-slide > div > div");
-    $(e.currentTarget).attr("data-active", true);
-    
-    // console.log(findChilrenHasAttribute($$$,"data-active"))
-    // console.log($$$.hasAttribute("data-choose"));
-})
+class ValidateSlide{
+    static storageOfSelected = [];
 
-function findChilrenHasAttribute(parent, currentAttribute){
-
-    if(parent.hasAttribute(currentAttribute)){
-        return parent.attr("data-choose");
-    }else{
-        $(parent).each((_,c) => {
+    static validateSlide(currentSlide){
+        
+        Array.from(currentSlide.children).forEach((currentNode) => {
             
-           return findChilrenHasAttribute(c, currentAttribute)
+            if(currentNode.getAttribute("data-active")){
+                const choose = currentNode.dataset.choose;
+                choose && this.storageOfSelected.push(choose);                
+            }
+            else {
+                this.validateSlide(currentNode);
+            }
         })
+        return this.storageOfSelected;       
     }
 
 }
+
+
+$("button[role='next-slide']").on("click", (e) => {
+    const $$$ = e.currentTarget.closest(".slick-slide > div > div");
+    $(e.currentTarget).attr("data-active", true);
+    cacheData = ValidateSlide.validateSlide($$$);
+})
+
+
+$("form[method='post']").on("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    const valRepeat = $("input[name='repeat_password']").val();
+    //123EW#@e2@Rwe
+    $("form[method='post']").find('input').each((i,e) => {
+
+        const repeatPasswordField = valRepeat === e.value;
+
+        if(e.type === "email" && /^\S+@\S+\.\S+$/g.test(e.value.trim())){
+            formData[i] = e.value;
+        }
+
+        if(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(e.value.trim()) && repeatPasswordField){
+            console.log('пароли совпадают');
+            formData[i] = e.value;
+        }
+
+        
+    })
+    console.log(formData);
+    
+})
+

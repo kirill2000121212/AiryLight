@@ -10,6 +10,7 @@
 
 <body>
     <header class="header">
+        
         <div id="modal-signUp" role="dialog" aria-modal="true">
 
             <div id="modal-signUp-container">
@@ -26,16 +27,17 @@
                         </span>
                         <div class="button-container">
 
-                            <button role="next-slide" data-choose="man">
+                            <button role="next-slide" data-choose="sex man">
                                 Мужчина
                             </button>
 
-                            <button role="next-slide" data-choose="girl">
+                            <button role="next-slide" data-choose="sex girl">
                                 Женщина
                             </button>
 
                         </div>
                     </div>
+                    
 
                     <div class="slide__who-find">
                         <p>
@@ -52,7 +54,7 @@
 
                                 <div class="toggle-element">
                                     <div class="toggle-element__cirlce"></div>
-                                    <input type="checkbox" data-choose="relationship">
+                                    <input type="checkbox" data-choose="search relationship">
                                 </div>
                             </div>
                             <div class="toggle-item">
@@ -64,11 +66,11 @@
 
                                 <div class="toggle-element">
                                     <div class="toggle-element__cirlce"></div>
-                                    <input type="checkbox" data-choose="friendship">
+                                    <input type="checkbox" data-choose="search friendship">
                                 </div>
                             </div>
                         </div>
-                        <button role="next-slide" class="next">
+                        <button role="next-slide" class="next" >
                             Далее
                         </button>
                     </div>
@@ -79,11 +81,17 @@
                         </p>
 
                         <div class="input-container">
-                            <input id="name" name="name" type="text" minlength="1" required>
+                            <input 
+                                id="name" 
+                                name="name" 
+                                type="text"
+                                data-choose="username" 
+                                minlength="1" 
+                                required>
                             <label for="name">Ваше имя</label>
                         </div>
 
-                        <button role="next-slide">
+                        <button role="next-slide" >
                             Далее
                         </button>
                     </div>
@@ -94,14 +102,14 @@
                         </p>
 
                         <div class="happybirthday__input-container">
-                            <input id="text-date" type="text" required minlength="6">
+                            <input id="text-date" type="text" data-choose="date" required minlength="6">
                             <div id="date">
                                 <input name="date" type="date" required datepicker>
                             </div>
                             <label for="text-date">Выберите дату</label>
                         </div>
 
-                        <button role="next-slide">
+                        <button role="next-slide" >
                             Далее
                         </button>
                     </div>
@@ -136,7 +144,7 @@
 
                         </div>
 
-                        <button role="next-slide">
+                        <button role="next-slide" >
                             Продолжить
                         </button>
                     </div>
@@ -164,7 +172,6 @@
 
                             <div class="form-item">
                                 <input class="form-item-input"
-                                    pattern=""
                                     minlength="1" 
                                     type="password" 
                                     name="password" 
@@ -175,7 +182,6 @@
 
                             <div class="form-item">
                                 <input class="form-item-input"
-                                    pattern=""
                                     minlength="1" 
                                     type="password" 
                                     name="repeat_password" 
@@ -184,7 +190,7 @@
                                 <img class="pass-icon" src="./images/hide-password-eye.svg" alt="eye-password">
                             </div>
 
-                            <button role="next-slide">
+                            <button role="next-slide" type="submit">
                                 Далее
                             </button>
                         </form>

@@ -3,19 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
     "start": "webpack serve",
     "clear": "rd /s /q dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.24.4",
     "@babel/preset-env": "^7.24.4",
     "babel-loader": "^9.1.3",
+    "concurrently": "^8.2.2",
     "css-loader": "^7.1.1",
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
@@ -33,8 +34,5 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
-  },
-  "dependencies": {
-    "jQuery": "^1.7.4"
   }
 }

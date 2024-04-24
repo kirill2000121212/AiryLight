@@ -1,14 +1,14 @@
-import "./scss/reset.scss";
-import "./scss/index.scss";
-import "./scss/variables.scss";
-import "./scss/fonts.scss";
-import "./scss/animation.scss";
-import "./scss/header.scss";
-import "./scss/sign-up-modal.scss";
-import "./scss/footer.scss";
+import "./shared/scss/reset.scss";
+import "./shared/scss/index.scss";
+import "./shared/scss/variables.scss";
+import "./shared/scss/fonts.scss";
+import "./shared/scss/animation.scss";
+import "./shared/scss/header.scss";
+import "./shared/scss/sign-up-modal.scss";
+import "./shared/scss/footer.scss";
 
-import "./js/sign-up.js"
-import "./js/validate-form.js"
+import "./shared/js/sign-up.js"
+import "./shared/js/validate-form.js"
 
 
 

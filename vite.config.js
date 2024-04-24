@@ -4,16 +4,15 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { resolve } from "path";
 import legacy from "@vitejs/plugin-legacy"
 import inject from "@rollup/plugin-inject";
+import mkcert from 'vite-plugin-mkcert'
 
 
 // SUMMARY: на будущее, когда надо склеить всех цыпочек 
 // <=========================================================>
 // export const allFilesHtml = [
-//     'activity.html',
-//     'how-work.html',
-//     'partner.html',
-//     'your-man.html',
-//     'pay.html',
+//      page1.html,
+//      page2.html,
+//      ...
 // ];
 
 // const inputAllFiles = (allFilesHtml) => {
@@ -45,18 +44,21 @@ export default defineConfig({
     server : {
         port : 5000,
         host : '0.0.0.0',
+        https : true,
         hmr: true
     },
     plugins : [
+        mkcert(),
         ViteAliases(),
         ViteImageOptimizer({
+            ansiColors : true,
             test: /\.(jpe?g|png|webp|svg|avif)$/i,
-            jpg : { quality : 80 },
-            jpeg : { quality : 80 },
-            png : { quality : 80 },
-            webp : { lossless : true },
+            jpg : { quality : 65 },
+            jpeg : { quality : 65 },
+            png : { quality : 65 },
+            webp : { lossless : false },
             avif : { lossless : true },
-            cache : false
+            cache : true
         }),
         legacy({
             targets : ['defaults', 'not IE 11']

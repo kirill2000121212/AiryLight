@@ -12,13 +12,16 @@
                 "src/images/*"
             ],
             "~js/*": [
-                "src/js/*"
+                "src/shared/js/*"
             ],
             "~scss/*": [
                 "src/scss/*"
             ],
             "~/*": [
                 "src/*"
+            ],
+            "~shared/*": [
+                "src/shared/*"
             ]
         }
     }

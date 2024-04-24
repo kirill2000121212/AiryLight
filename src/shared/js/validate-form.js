@@ -28,3 +28,7 @@ document.querySelector("#form-signUp").addEventListener("submit", (event) => {
   formData["mail"] = valMail;
   formData["password"] = valPassword;
 });
+
+document.querySelector(".sign-in").addEventListener("submit", (event) => {
+  event.preventDefault();
+});

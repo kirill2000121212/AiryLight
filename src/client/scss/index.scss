@@ -2,39 +2,20 @@
 @import "./reset";
 @import "./variables";
 
-#modal-signUp {
-    max-width: 430px;
-    width: 430px;
-    height: 320px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 10px 50px 0px rgba(179, 186, 207, 0.2);
-    background: rgb(255, 255, 255);
-    outline: none;
-    padding: 30px;
+section {
+    position: relative;
 }
 
-#modal-signUp::backdrop {
-    backdrop-filter: blur(100px);
-    background: rgba(255, 255, 255, 0.5);
+.scroll-container{
+    scroll-behavior: smooth;
 }
 
-.swiper-pagination__list {
-    display: flex;
-    gap: 5px;
-
-    &-item {
-        width: 64px;
-        height: 4px;
-        border-radius: 9px;
-        background: rgb(179, 186, 207);
-        opacity: 0.25;
-    }
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
+header> .arrow__g ,
+section> .arrow__g {
+    position: absolute;
+    bottom: 30px;
+    left: 200px;
+    cursor: pointer;
 }
 
 .title-gradient {
@@ -161,6 +142,15 @@
         line-height: 30px;
         width: 466px;
     }
+
+    & #Vector {
+        fill: rgb(250, 251, 252);
+    }
+
+    .arrow__g {
+        bottom: 20px;
+    }
+
 }
 
 .how-work {
@@ -220,7 +210,6 @@
         bottom: -240px;
         transform: scale(.8);
     }
-
 }
 
 .pay {
@@ -379,6 +368,14 @@
         cursor: pointer;
     }
 
+    & #Vector {
+        fill: rgb(250, 251, 252);
+    }
+
+    .arrow__g {
+        z-index: 2;
+    }
+
 }
 
 .partner {
@@ -407,6 +404,14 @@
         line-height: 30px;
         width: 466px;
         padding-bottom: 36px;
+    }
+
+    & #Vector {
+        fill: rgb(250, 251, 252);
+    }
+
+    .arrow {
+        transform: rotate(180deg);
     }
 }
 

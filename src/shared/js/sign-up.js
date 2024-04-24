@@ -28,8 +28,8 @@ $(".modal-signUp__slick")
   });
 
 $(() => {
-  $(".slick-dots > li:last-child").remove();
-  $(".slick-dots > li:last-child").remove();
+  $(".modal-signUp__slick > .slick-dots > li:last-child").remove();
+  $(".modal-signUp__slick > .slick-dots > li:last-child").remove();
   $("li[role='presentation']").off("click");
 });
 

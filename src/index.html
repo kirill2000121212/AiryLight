@@ -117,11 +117,17 @@
             латинских букв, цифр и других символов
           </strong>
 
-          <form id="form-signUp">
-            <div class="form-item">
-              <input class="form-item-input" minlength="1" type="email" name="email" required />
-              <label role="placeholder">Ваша почта</label>
-            </div>
+            <form id="form-signUp" method="post">
+              <div class="form-item">
+                <input
+                  class="form-item-input"
+                  minlength="1"
+                  type="email"
+                  name="email"
+                  required
+                />
+                <label role="placeholder">Ваша почта</label>
+              </div>
 
             <div class="form-item">
               <input class="form-item-input" minlength="1" type="password" name="password" required />
@@ -135,9 +141,9 @@
               <img class="pass-icon" src="./shared/images/hide-password-eye.svg" alt="eye-password" />
             </div>
 
-            <button type="submit">Далее</button>
-          </form>
-        </div>
+              <button role="next-slide" type="submit">Далее</button>
+            </form>
+          </div>
 
         <div class="slide__thanks-for">
           <p>Спасибо за регистрацию!</p>

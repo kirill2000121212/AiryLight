@@ -1,0 +1,56 @@
+.how-work{
+    
+}
+
+.how-work__wrapper {
+
+    position: relative;
+
+    & .slick-dots {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.how-work--right{
+    
+    & .slick-slide{
+        height: 100vh;
+    }
+}
+
+.slider__how-work {
+
+    & .slick-dots {
+        display: flex;
+        gap: 5px;
+        padding-top: 6px;
+
+
+        & li {
+            width: 64px;
+            height: 4px;
+            border-radius: 9px;
+            background: rgb(179, 186, 207);
+            opacity: 0.25;
+
+            //вынужденная мера Т_Т
+            & button[id^="slick-slide-control"] {
+                display: none;
+            }
+        }
+
+        & .slick-active {
+            background: rgb(179, 186, 207);
+            opacity: 1;
+        }
+    }
+
+    & .slick-list {
+        min-height: 100%;
+    }
+
+
+
+}

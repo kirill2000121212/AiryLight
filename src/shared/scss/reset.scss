@@ -50,3 +50,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+button{
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+}
+
+input{
+	width: 100%;
+	outline: none;
+	border: none;
+}

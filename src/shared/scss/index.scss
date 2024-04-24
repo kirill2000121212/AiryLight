@@ -83,6 +83,8 @@ section>.arrow__g {
 
 .how-work {
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 
   &__title {
     @extend %title-text;
@@ -97,6 +99,23 @@ section>.arrow__g {
     width: 466px;
     padding-bottom: 43px;
   }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+  }
+
+  &__right {
+    overflow: hidden;
+  }
+
+&__img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 }
 
 .activity {
@@ -335,10 +354,10 @@ section>.arrow__g {
 
   & #Vector {
     fill: rgb(250, 251, 252);
-}
+  }
 
-.arrow {
+  .arrow {
     transform: rotate(180deg);
-}
+  }
 
 }

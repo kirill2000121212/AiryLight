@@ -22,6 +22,9 @@
             ],
             "~shared/*": [
                 "src/shared/*"
+            ],
+            "~pages/*": [
+                "src/pages/*"
             ]
         }
     }

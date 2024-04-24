@@ -4,7 +4,7 @@ const $signUpCloseModal = $("#close-modal");
 import 'jquery';
 import "slick-carousel";
 
-let cacheData;
+export let cacheData;
 
 $(".modal-signUp__slick").slick({
     infinite : false,
@@ -25,7 +25,6 @@ $(".modal-signUp__slick").slick({
     if(index >= $(".slick-track > div").length - 2){
         $(".slick-dots > li:last-child").addClass("slick-active");
     }
-    console.log(cacheData);
 })
 
 

@@ -1,3 +1,5 @@
+import { cacheData } from "./sign-up";
+
 document.querySelector("#form-signUp").addEventListener("submit", (event) => {
 
     event.preventDefault();
@@ -19,5 +21,5 @@ document.querySelector("#form-signUp").addEventListener("submit", (event) => {
         if(repeatPasswordField && /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(valPassword.trim()) ){
             formData['password'] = valPassword;
         }
-        
+    console.log(cacheData, formData);
 })

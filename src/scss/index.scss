@@ -1,8 +1,6 @@
-@import "./fonts";
-@import "./reset";
-@import "./variables";
-@import "./sign-up";
-
+@import "./fonts.scss";
+@import "./reset.scss";
+@import "./variables.scss";
 
 .title-gradient {
     @extend %title-gradient
@@ -33,79 +31,6 @@
     cursor: pointer;
 }
 
-.header {
-    height: 100vh;
-
-    &-top {
-        display: flex;
-        align-items: center;
-        padding-top: 30px;
-        font-family: "Nunito Sans Regular";
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        position: fixed;
-        width: 100%;
-        gap: 860px;
-        z-index: 100;
-    }
-
-    &-top__logo {
-        cursor: pointer;
-    }
-
-    &-top__list {
-        display: flex;
-        gap: 50px;
-    }
-
-    &-top__list-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-    }
-
-    &-bottom {
-        display: flex;
-        position: relative;
-        padding-top: 210px;
-    }
-
-    &-bottom__phone {
-        z-index: -1;
-        position: absolute;
-        right: 120px;
-        top: 185px;
-        transform: scale(.9);
-    }
-
-    &-bottom__img {
-        position: absolute;
-        right: -153px;
-        top: 150px;
-        z-index: -2;
-    }
-
-    &-bottom__title {
-        @extend %title-text;
-        padding-bottom: 68px;
-    }
-
-    &-bottom__text {
-        font-family: "Nunito Sans Regular";
-        font-size: 22px;
-        line-height: 30px;
-        width: 466px;
-        padding-bottom: 36px;
-    }
-
-    &-bottom__btn {
-        display: flex;
-        gap: 20px;
-    }
-}
-
 .your-man {
     background-image: url(../images/your-man__cool-man.png);
     background-color: rgb(81, 81, 81);
@@ -131,6 +56,7 @@
     }
 }
 
+
 .how-work {
     height: 100vh;
 
@@ -148,6 +74,7 @@
         padding-bottom: 43px;
     }
 }
+
 
 .activity {
     height: 100vh;
@@ -190,6 +117,7 @@
     }
 
 }
+
 
 .pay {
     height: 100vh;
@@ -349,6 +277,7 @@
 
 }
 
+
 .partner {
     height: 100vh;
     background: linear-gradient(110deg, rgb(0, 0, 0), rgb(66, 66, 71));
@@ -375,21 +304,5 @@
         line-height: 30px;
         width: 466px;
         padding-bottom: 36px;
-    }
-}
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-
-    &__copyright {
-        color: rgb(179, 186, 207);
-        font-family: "Nunito Sans Light";
-        font-size: 14px;
-        line-height: 20px;
-        display: flex;
-        gap: 20px;
     }
 }

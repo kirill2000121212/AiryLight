@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AiryLight</title>
     <link rel="preload" href="./images/show-password-eye.svg" as="image">
 </head>
-
 <body>
     <header class="header">
         
         <div id="modal-signUp" role="dialog" aria-modal="true">
-
+    
             <div id="modal-signUp-container">
-
+    
                 <div class="modal-signUp__slick">
-
+    
                     <div class="slide__choose-sex">
                         <b>Привет, это Айри</b>
                         <p>
@@ -26,44 +24,44 @@
                             Расскажите, кто вы?
                         </span>
                         <div class="button-container">
-
+    
                             <button role="next-slide" data-choose="man">
                                 Мужчина
                             </button>
-
+    
                             <button role="next-slide" data-choose="girl">
                                 Женщина
                             </button>
-
+    
                         </div>
                     </div>
                     
-
+    
                     <div class="slide__who-find">
                         <p>
                             Кого хотите найти?
                         </p>
                         <div class="choose">
-
+    
                             <div class="toggle-item">
-
+    
                                 <div class="toggle-info">
-                                    <img src="./images/relationship.svg" alt="toggle-icon">
+                                    <img src="../images/relationship.svg" alt="toggle-icon">
                                     Отношения
                                 </div>
-
+    
                                 <div class="toggle-element">
                                     <div class="toggle-element__cirlce"></div>
                                     <input type="checkbox" data-choose="relationship">
                                 </div>
                             </div>
                             <div class="toggle-item">
-
+    
                                 <div class="toggle-info">
-                                    <img src="./images/friendship.svg" alt="toggle-icon">
+                                    <img src="../images/friendship.svg" alt="toggle-icon">
                                     Друзей
                                 </div>
-
+    
                                 <div class="toggle-element">
                                     <div class="toggle-element__cirlce"></div>
                                     <input type="checkbox" data-choose="friendship">
@@ -74,12 +72,12 @@
                             Далее
                         </button>
                     </div>
-
+    
                     <div class="slide__choose-name">
                         <p>
                             Как вас зовут?
                         </p>
-
+    
                         <div class="input-container">
                             <input
                                 pattern="\w" 
@@ -91,17 +89,17 @@
                                 required>
                             <label for="name">Ваше имя</label>
                         </div>
-
+    
                         <button role="next-slide" >
                             Далее
                         </button>
                     </div>
-
+    
                     <div class="slide__happybirthday">
                         <p>
                             Когда у вас день рождения?
                         </p>
-
+    
                         <div class="happybirthday__input-container">
                             <input  
                                 id="text-date"   
@@ -114,59 +112,59 @@
                             </div>
                             <label for="text-date">Выберите дату</label>
                         </div>
-
+    
                         <button role="next-slide" >
                             Далее
                         </button>
                     </div>
-
+    
                     <div class="slide__important-documents">
                         <p >
                             Важные документы
                         </p>
-
+    
                         <strong>
                             Нажимая «Продолжить» вы соглашаетесь на обработку персональных данных, 
                             а также принимаете пользовательское соглашение:
                         </strong>
-
+    
                         <div class="document-container">
-
+    
                             <div class="document-item">
                                 <div class="document-info">
-                                    <img src="./images/signature.svg" alt="doc-icon">
+                                    <img src="../images/signature.svg" alt="doc-icon">
                                   Пользовательское соглашение
                                 </div>
-                                <img width="6" height="11" src="./images/arrow-right.svg" alt="arrow-right">
+                                <img width="6" height="11" src="../images/arrow-right.svg" alt="arrow-right">
                             </div>
-
+    
                             <div class="document-item">
                                 <div class="document-info">
-                                    <img src="./images/define.svg" alt="doc-icon">
+                                    <img src="../images/define.svg" alt="doc-icon">
                                     Обработка персональных данных
                                 </div>
-                                <img width="6" height="11" src="./images/arrow-right.svg" alt="arrow-right">
+                                <img width="6" height="11" src="../images/arrow-right.svg" alt="arrow-right">
                             </div>   
-
+    
                         </div>
-
+    
                         <button role="next-slide" >
                             Продолжить
                         </button>
                     </div>
-
+    
                     <div class="slide__sign-up">
                         <p>
                             Ваши данные
                         </p>
-
+    
                         <strong>
                             Установите уникальный сложный пароль, 
                             используйте любую комбинацию латинских букв, цифр и других символов
                         </strong>
-
-                        <form id="form-signUp" method="post">
-
+    
+                        <form id="form-signUp">
+    
                             <div class="form-item">
                                 <input class="form-item-input"
                                     minlength="1" 
@@ -175,40 +173,39 @@
                                     required>
                                 <label role="placeholder">Ваша почта</label>
                             </div>
-
+    
                             <div class="form-item">
-                                <input class="form-item-input"
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                <input class="form-item-input"   
                                     minlength="1" 
                                     type="password" 
                                     name="password" 
                                     required>
                                 <label role="placeholder">Придумайте пароль</label>
-                                <img class="pass-icon" src="./images/hide-password-eye.svg" alt="eye-password">
+                                <img class="pass-icon" src="../images/hide-password-eye.svg" alt="eye-password">
                             </div>
-
+    
                             <div class="form-item">
                                 <input class="form-item-input"
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                     minlength="1" 
                                     type="password" 
                                     name="repeat_password" 
                                     required>
                                 <label role="placeholder">Повторите этот пароль</label>
-                                <img class="pass-icon" src="./images/hide-password-eye.svg" alt="eye-password">
+                                <img class="pass-icon" src="../images/hide-password-eye.svg" alt="eye-password">
                             </div>
-
+    
                             <button type="submit">
                                 Далее
                             </button>
                         </form>
-                    </div>
 
+                    </div>
+    
                     <div class="slide__thanks-for">
                         <p>
                             Спасибо за регистрацию!
                         </p>
-
+    
                         <strong>
                             Мы отправили на указанную почту
                             dencreate@gmail.com ссылкe для
@@ -216,37 +213,37 @@
                             пройти по нему и активировать
                             аккаунт
                         </strong>
-
+    
                         <button class="end-slider">
                             Отправить ещё раз
                         </button>
                     </div>
                         
                   </div>
-
+    
                   <button id="close-modal">
-                    <img src="./images/close-modal.svg" alt="close-modal">
+                    <img src="../images/close-modal.svg" alt="close-modal">
                 </button>
             </div>
               
         </div>
         <div class="container">
             <div class="header-top">
-                <img class="header-top__logo" src="./images/logo.svg" alt="logo">
+                <img class="header-top__logo" src="../images/logo.svg" alt="logo">
                 <ul class="header-top__list">
                     <li class="header-top__list-item">
-                        <img class="list-item__img" src="./images/lock.svg" alt="lock">
+                        <img class="list-item__img" src="../images/lock.svg" alt="lock">
                         Вход
                     </li>
                     <li id="signup" class="header-top__list-item">
                         Регистрация
                     </li>
                     <li class="header-top__list-item">
-                        <img class="list-item__img" src="./images/menu.svg" alt="menu">
+                        <img class="list-item__img" src="../images/menu.svg" alt="menu">
                         Меню
                     </li>
                 </ul>
-
+    
                 
             </div>
             <div class="header-bottom">
@@ -259,38 +256,43 @@
                     <div class="header-bottom__btn">
                         <button class="btn-left">
                             Хочу попробовать
-                            <img src="./images/try-icon.svg" alt="try-icon">
+                            <img src="../images/try-icon.svg" alt="try-icon">
                         </button>
                         <button class="btn-right">
                             Как это работает?
-                            <img src="./images/how-work-arrow.svg" alt="how-work-arrow">
+                            <img src="../images/how-work-arrow.svg" alt="how-work-arrow">
                         </button>
                     </div>
                 </div>
-                <img class="header-bottom__phone" src="./images/header-phone.png" alt="header-phone">
-                <img class="header-bottom__img" src="./images/header-img.png" alt="header-img">
+                <img class="header-bottom__phone" src="../images/header-phone.png" alt="header-phone">
+                <img class="header-bottom__img" src="../images/header-img.png" alt="header-img">
             </div>
         </div>
     </header>
+
     <main class="main">
+
         <section class="your-man">
+
             <div class="container">
                 <h3 class="your-man__title">
                     Найти «своего»<br><span class="title-gradient">человека</span>
                 </h3>
                 <p class="your-man__text">Вы считали, сколько времени и денег вы тратите, чтобы найти «своего»
                     человека?<br><br>
-
+        
                     Сколько свиданий заканчивается глубокими отношениями? Пять? Десять? Больше?<br>
                     Каждое свидание — это несколько часов и тысячи рублей на подготовку, дорогу и общение.
-
+        
                     <br><br>Мы нашли решение, как при помощи искусственного интеллекта сделать так,<br> чтобы вы
                     нашли
                     интересного
                     вам человека сразу.
                 </p>
             </div>
+            
         </section>
+
         <section class="how-work">
             <div class="container">
                 <h3 class="how-work__title">
@@ -299,16 +301,19 @@
                 <p class="how-work__text">
                     Давайте я расскажу вам, как искусственный интеллект Айри находит людей, с которыми вам будет
                     интересно и делает первое свидание безопасным
-
+        
                 </p>
                 <button class="btn-left">
                     Хочу попробовать
-                    <img src="./images/try-icon.svg" alt="try-icon">
+                    <img src="../../images/try-icon.svg" alt="try-icon">
                 </button>
             </div>
         </section>
+
         <section class="activity">
+
             <div class="container">
+        
                 <div class="activity__wrapper">
                     <div class="activity__left">
                         <h3 class="activity__title">
@@ -323,16 +328,19 @@
                         </p>
                         <button class="btn-left">
                             Хочу попробовать
-                            <img src="./images/try-icon.svg" alt="try-icon">
+                            <img src="../../images/try-icon.svg" alt="try-icon">
                         </button>
                     </div>
                     <div class="activity__right">
+                        
                         <h3>Творческие <br>мероприятия</h3>
-                        <img class="activity__right-img" src="./images/debili.png" alt="debili">
+                        <img class="activity__right-img" src="../../images/debili.png" alt="debili">
                     </div>
                 </div>
             </div>
+        
         </section>
+
         <section class="pay">
             <div class="pay__wrapper">
                 <div class="pay__left">
@@ -342,28 +350,28 @@
                     <div class="pay__inner">
                         <div class="pay__box">
                             <p class="pay__text">Обычный</p>
-                            <img src="./images/plus.svg" alt="plus" width="19" height="12">
+                            <img src="../../images/plus.svg" alt="plus" width="19" height="12">
                         </div>
                         <p class="pay__text--2">Сэкономьте до 30%<br>
                             при переходе на этот тариф</p>
                         <ul class="pay__list">
                             <li class="pay__list-item">
-                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                <img class="pay__list-img" src="../../images/check.svg" alt="check" width="10.5"
                                     height="9.5">
                                 <p class="pay__list-text">Пробный период 1 месяц бесплатно</p>
                             </li>
                             <li class="pay__list-item">
-                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                <img class="pay__list-img" src="../../images/check.svg" alt="check" width="10.5"
                                     height="9.5">
                                 <p class="pay__list-text">Находите людей со 100% совместимостью</p>
                             </li>
                             <li class="pay__list-item">
-                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                <img class="pay__list-img" src="../../images/check.svg" alt="check" width="10.5"
                                     height="9.5">
                                 <p class="pay__list-text">Запретите видеться себя геолокации </p>
                             </li>
                             <li class="pay__list-item">
-                                <img class="pay__list-img" src="./images/check.svg" alt="check" width="10.5"
+                                <img class="pay__list-img" src="../../images/check.svg" alt="check" width="10.5"
                                     height="9.5">
                                 <p class="pay__list-text">Скройтесь ото всех</p>
                             </li>
@@ -400,6 +408,7 @@
                 </div>
             </div>
         </section>
+
         <section class="partner">
             <div class="partner__wrapper">
                 <div class="container">
@@ -409,12 +418,14 @@
                         знакомого.</p>
                     <button class="btn-left">
                         Хочу попробовать
-                        <img src="./images/try-icon.svg" alt="try-icon">
+                        <img src="../../images/try-icon.svg" alt="try-icon">
                     </button>
                 </div>
             </div>
         </section>
+
     </main>
+
     <footer class="footer">
         <div class="footer__copyright">
             <span> © Айри, 2023 г.</span>
@@ -422,6 +433,7 @@
             <span>help@ayiri.ru</span>
         </div>
     </footer>
-</body>
 
+    <script src="./index.js" type="module"></script>
+</body>
 </html>

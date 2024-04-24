@@ -1,0 +1,74 @@
+@import "./variables.scss";
+
+.header {
+    height: 100vh;
+
+    &-top {
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+        font-family: "Nunito Sans Regular";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        position: fixed;
+        width: 100%;
+        gap: 860px;
+        z-index: 100;
+    }
+
+    &-top__logo {
+        cursor: pointer;
+    }
+
+    &-top__list {
+        display: flex;
+        gap: 50px;
+    }
+
+    &-top__list-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    &-bottom {
+        display: flex;
+        position: relative;
+        padding-top: 210px;
+    }
+
+    &-bottom__phone {
+        z-index: -1;
+        position: absolute;
+        right: 120px;
+        top: 185px;
+        transform: scale(.9);
+    }
+
+    &-bottom__img {
+        position: absolute;
+        right: -153px;
+        top: 150px;
+        z-index: -2;
+    }
+
+    &-bottom__title {
+        @extend %title-text;
+        padding-bottom: 68px;
+    }
+
+    &-bottom__text {
+        font-family: "Nunito Sans Regular";
+        font-size: 22px;
+        line-height: 30px;
+        width: 466px;
+        padding-bottom: 36px;
+    }
+
+    &-bottom__btn {
+        display: flex;
+        gap: 20px;
+    }
+}

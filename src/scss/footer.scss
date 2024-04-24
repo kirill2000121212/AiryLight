@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    &__copyright {
+        color: rgb(179, 186, 207);
+        font-family: "Nunito Sans Light";
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        gap: 20px;
+    }
+}

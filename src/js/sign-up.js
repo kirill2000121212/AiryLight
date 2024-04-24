@@ -93,10 +93,11 @@ $(".pass-icon").on("click",(e) => {
     });  
 })
 
-class ValidateSlide{
+class UserChoce{
+
     static storageOfSelected = [];
 
-    static validateSlide(currentSlide){
+    static choce(currentSlide){
         
         Array.from(currentSlide.children).forEach((currentNode) => {
             
@@ -105,7 +106,7 @@ class ValidateSlide{
                 choose && this.storageOfSelected.push(choose);                
             }
             else {
-                this.validateSlide(currentNode);
+                this.choce(currentNode);
             }
         })
         return this.storageOfSelected;       
@@ -114,34 +115,10 @@ class ValidateSlide{
 }
 
 
+
 $("button[role='next-slide']").on("click", (e) => {
     const $$$ = e.currentTarget.closest(".slick-slide > div > div");
     $(e.currentTarget).attr("data-active", true);
-    cacheData = ValidateSlide.validateSlide($$$);
-})
-
-
-$("form[method='post']").on("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    const valRepeat = $("input[name='repeat_password']").val();
-    
-    $("form[method='post']").find('input').each((i,e) => {
-
-        const repeatPasswordField = valRepeat === e.value;
-
-        if(e.type === "email" && /^\S+@\S+\.\S+$/g.test(e.value.trim())){
-            formData[i] = e.value;
-        }
-
-        if(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(e.value.trim()) && repeatPasswordField){
-            formData[i] = e.value;
-        }
-
-    })
-    
-},(e) => {
-    e.preventDefault();
-    $(".modal-signUp__slick")
+    cacheData = UserChoce.choce($$$);
 })
 

@@ -1,4 +1,4 @@
-%button-for-sign-up{
+%button-for-sign-up {
     font-size: 16px;
     padding: 10px 161px;
     border-radius: 12px;
@@ -7,7 +7,7 @@
     font-family: "Nunito Sans Regular";
 }
 
-%toggle-checkbox{
+%toggle-checkbox {
     width: 50px;
     height: 30px;
     position: relative;
@@ -15,7 +15,7 @@
     background: rgb(179, 186, 207);
     opacity: 0.3;
 
-    .toggle-element__cirlce{
+    .toggle-element__cirlce {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -27,7 +27,7 @@
         transition: transform 1s;
     }
 
-    & input[type="checkbox"]{
+    & input[type="checkbox"] {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -36,7 +36,7 @@
         appearance: none !important;
     }
 
-    .animation-toggle{
+    .animation-toggle {
         transform: translateX(20px);
     }
 

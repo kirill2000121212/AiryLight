@@ -10,8 +10,8 @@ section {
   scroll-behavior: smooth;
 }
 
-header > .arrow__g,
-section > .arrow__g {
+header>.arrow__g,
+section>.arrow__g {
   position: absolute;
   bottom: 30px;
   left: 200px;
@@ -41,6 +41,7 @@ section > .arrow__g {
   font-family: "Nunito Sans SemiBold";
   font-size: 18px;
   line-height: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
@@ -102,32 +103,22 @@ section > .arrow__g {
     grid-template-columns: repeat(2, 1fr);
     height: 100vh;
   }
-
-  &__right {
-    overflow: hidden;
-  }
-
-  &__img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
 }
 
 .activity {
   height: 100vh;
-  background: linear-gradient(90deg, white 50%, rgb(237, 230, 167) 50%);
   overflow: hidden;
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 210px;
+    height: 100vh;
   }
 
   &__title {
     @extend %title-text;
     padding-bottom: 74px;
+    padding-top: 210px;
   }
 
   &__text {
@@ -138,20 +129,14 @@ section > .arrow__g {
     padding-bottom: 43px;
   }
 
+  &__left {
+    padding-left: 200px;
+  }
+
   &__right {
     font-family: "Druk-Medium";
     font-size: 50px;
     line-height: 50px;
-    color: white;
-    padding-left: 110px;
-    position: relative;
-  }
-
-  &__right-img {
-    position: absolute;
-    right: -305px;
-    bottom: -240px;
-    transform: scale(0.8);
   }
 }
 

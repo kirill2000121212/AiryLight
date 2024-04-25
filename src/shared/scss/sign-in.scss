@@ -1,0 +1,122 @@
+@import "./fonts.scss";
+@import "./variables.scss";
+
+@scope (.modal-signIn-container) {
+  input {
+    border-radius: 12px;
+    background: rgb(250, 251, 252);
+    padding: 34px 42px 16px 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: transform 600s;
+  }
+
+  p {
+    margin-bottom: 25px;
+    font-family: "Nunito Sans Bold";
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  label {
+    position: absolute;
+    top: 24px;
+    left: 15px;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Nunito sans Regular";
+    color: rgb(145, 154, 182);
+  }
+}
+
+.sign-in {
+  & .modal-signIn-container {
+    color: rgb(4, 36, 43);
+    position: relative;
+    padding: 30px;
+    box-shadow: 0px 10px 50px 0px rgba(179, 186, 207, 0.2);
+    background-color: white;
+    max-width: 430px;
+    min-width: 430px;
+    border-radius: 20px;
+  }
+
+  & #sign-in {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  & .form-item {
+    position: relative;
+  }
+
+  & .form-item-input:focus ~ label {
+    font-size: 11px;
+    transform: translateY(-12px);
+  }
+
+  & .form-item-input:not(:focus):user-invalid ~ label {
+    font-size: 11px;
+    transform: translateY(-12px);
+  }
+
+  & .form-item-input:not(:focus):user-valid ~ label {
+    font-size: 11px;
+    transform: translateY(-12px);
+  }
+
+  & .pass-icon {
+    position: absolute;
+    top: 28px;
+    right: 15px;
+  }
+
+  & #close-modal {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  & .toggle-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 15px 16px 16px;
+    border-radius: 12px;
+    background: rgb(250, 251, 252);
+    transition: opacity 1s;
+  }
+
+  & .toggle-info {
+    display: flex;
+    align-items: center;
+    font-family: "Nunito Sans Regular";
+    font-size: 16px;
+  }
+
+  & .toggle-element {
+    @extend %toggle-checkbox;
+    &__cirlce {
+      z-index: 1;
+    }
+  }
+  & .login {
+    @extend %button-for-sign-up;
+    margin-bottom: 10px;
+  }
+
+  & .restore {
+    color: rgb(255, 68, 96);
+    font-family: "Nunito Sans Regular";
+    line-height: 22px;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+
+  & input[type="checkbox"] {
+    background-color: transparent;
+  }
+}

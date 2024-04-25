@@ -1,121 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="manifest"
+      crossorigin="use-credentials"
+      href="../favic.webmanifest"
+    />
+    <title>AiryLight</title>
+    <link
+      rel="preload"
+      href="./shared/images/show-password-eye.svg"
+      as="image"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AiryLight</title>
-  <link rel="preload" href="./shared/images/show-password-eye.svg" as="image" />
-</head>
+  <body>
+    <div id="modal-signUp" role="dialog" aria-modal="true">
+      <div id="modal-signUp-container">
+        <div class="modal-signUp__slick">
+          <div class="slide__choose-sex">
+            <b>Привет, это Айри</b>
+            <p>
+              Привет, это Айри) Мне нужно задать вам 5 вопросов, чтобы дать
+              доступ к анкетам, ок?
+            </p>
+            <span> Расскажите, кто вы? </span>
+            <div class="button-container">
+              <button role="next-slide" data-choose="man">Мужчина</button>
 
-<body>
-  <div id="modal-signUp" role="dialog" aria-modal="true">
-    <div id="modal-signUp-container">
-      <div class="modal-signUp__slick">
-        <div class="slide__choose-sex">
-          <b>Привет, это Айри</b>
-          <p>
-            Привет, это Айри) Мне нужно задать вам 5 вопросов, чтобы дать
-            доступ к анкетам, ок?
-          </p>
-          <span> Расскажите, кто вы? </span>
-          <div class="button-container">
-            <button role="next-slide" data-choose="man">Мужчина</button>
-
-            <button role="next-slide" data-choose="girl">Женщина</button>
-          </div>
-        </div>
-
-        <div class="slide__who-find">
-          <p>Кого хотите найти?</p>
-          <div class="choose">
-            <div class="toggle-item">
-              <div class="toggle-info">
-                <img src="./shared/images/relationship.svg" alt="toggle-icon" />
-                Отношения
-              </div>
-
-              <div class="toggle-element">
-                <div class="toggle-element__cirlce"></div>
-                <input type="checkbox" data-choose="relationship" />
-              </div>
-            </div>
-            <div class="toggle-item">
-              <div class="toggle-info">
-                <img src="./shared/images/friendship.svg" alt="toggle-icon" />
-                Друзей
-              </div>
-
-              <div class="toggle-element">
-                <div class="toggle-element__cirlce"></div>
-                <input type="checkbox" data-choose="friendship" />
-              </div>
-            </div>
-          </div>
-          <button role="next-slide" class="next">Далее</button>
-        </div>
-
-        <div class="slide__choose-name">
-          <p>Как вас зовут?</p>
-
-          <div class="input-container">
-            <input id="name" name="name" type="text" data-choose="username" minlength="1" required />
-            <label for="name">Ваше имя</label>
-          </div>
-
-          <button role="next-slide">Далее</button>
-        </div>
-
-        <div class="slide__happybirthday">
-          <p>Когда у вас день рождения?</p>
-
-          <div class="happybirthday__input-container">
-            <input id="text-date" type="text" data-choose="date" required minlength="6" />
-            <div id="date">
-              <input name="date" type="date" required datepicker />
-            </div>
-            <label for="text-date">Выберите дату</label>
-          </div>
-
-          <button role="next-slide">Далее</button>
-        </div>
-
-        <div class="slide__important-documents">
-          <p>Важные документы</p>
-
-          <strong>
-            Нажимая «Продолжить» вы соглашаетесь на обработку персональных
-            данных, а также принимаете пользовательское соглашение:
-          </strong>
-
-          <div class="document-container">
-            <div class="document-item">
-              <div class="document-info">
-                <img src="./shared/images/signature.svg" alt="doc-icon" />
-                Пользовательское соглашение
-              </div>
-              <img width="6" height="11" src="./shared/images/arrow-right.svg" alt="arrow-right" />
-            </div>
-
-            <div class="document-item">
-              <div class="document-info">
-                <img src="./shared/images/define.svg" alt="doc-icon" />
-                Обработка персональных данных
-              </div>
-              <img width="6" height="11" src="./shared/images/arrow-right.svg" alt="arrow-right" />
+              <button role="next-slide" data-choose="girl">Женщина</button>
             </div>
           </div>
 
-          <button role="next-slide">Продолжить</button>
-        </div>
+          <div class="slide__who-find">
+            <p>Кого хотите найти?</p>
+            <div class="choose">
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <img
+                    src="./shared/images/relationship.svg"
+                    alt="toggle-icon"
+                  />
+                  Отношения
+                </div>
 
-        <div class="slide__sign-up">
-          <p>Ваши данные</p>
+                <div class="toggle-element">
+                  <div class="toggle-element__cirlce"></div>
+                  <input type="checkbox" data-choose="relationship" />
+                </div>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <img src="./shared/images/friendship.svg" alt="toggle-icon" />
+                  Друзей
+                </div>
 
-          <strong>
-            Установите уникальный сложный пароль, используйте любую комбинацию
-            латинских букв, цифр и других символов
-          </strong>
+                <div class="toggle-element">
+                  <div class="toggle-element__cirlce"></div>
+                  <input type="checkbox" data-choose="friendship" />
+                </div>
+              </div>
+            </div>
+            <button role="next-slide" class="next">Далее</button>
+          </div>
+
+          <div class="slide__choose-name">
+            <p>Как вас зовут?</p>
+
+            <div class="input-container">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                data-choose="username"
+                minlength="1"
+                required
+              />
+              <label for="name">Ваше имя</label>
+            </div>
+
+            <button role="next-slide">Далее</button>
+          </div>
+
+          <div class="slide__happybirthday">
+            <p>Когда у вас день рождения?</p>
+
+            <div class="happybirthday__input-container">
+              <input
+                id="text-date"
+                type="text"
+                data-choose="date"
+                required
+                minlength="6"
+              />
+              <div id="date">
+                <input name="date" type="date" required datepicker />
+              </div>
+              <label for="text-date">Выберите дату</label>
+            </div>
+
+            <button role="next-slide">Далее</button>
+          </div>
+
+          <div class="slide__important-documents">
+            <p>Важные документы</p>
+
+            <strong>
+              Нажимая «Продолжить» вы соглашаетесь на обработку персональных
+              данных, а также принимаете пользовательское соглашение:
+            </strong>
+
+            <div class="document-container">
+              <div class="document-item">
+                <div class="document-info">
+                  <img src="./shared/images/signature.svg" alt="doc-icon" />
+                  Пользовательское соглашение
+                </div>
+                <img
+                  width="6"
+                  height="11"
+                  src="./shared/images/arrow-right.svg"
+                  alt="arrow-right"
+                />
+              </div>
+
+              <div class="document-item">
+                <div class="document-info">
+                  <img src="./shared/images/define.svg" alt="doc-icon" />
+                  Обработка персональных данных
+                </div>
+                <img
+                  width="6"
+                  height="11"
+                  src="./shared/images/arrow-right.svg"
+                  alt="arrow-right"
+                />
+              </div>
+            </div>
+
+            <button role="next-slide">Продолжить</button>
+          </div>
+
+          <div class="slide__sign-up">
+            <p>Ваши данные</p>
+
+            <strong>
+              Установите уникальный сложный пароль, используйте любую комбинацию
+              латинских букв, цифр и других символов
+            </strong>
 
             <form id="form-signUp" method="post">
               <div class="form-item">
@@ -129,103 +163,238 @@
                 <label role="placeholder">Ваша почта</label>
               </div>
 
-            <div class="form-item">
-              <input class="form-item-input" minlength="1" type="password" name="password" required />
-              <label role="placeholder">Придумайте пароль</label>
-              <img class="pass-icon" src="./shared/images/hide-password-eye.svg" alt="eye-password" />
-            </div>
+              <div class="form-item">
+                <input
+                  class="form-item-input"
+                  minlength="1"
+                  type="password"
+                  name="password"
+                  required
+                />
+                <label role="placeholder">Придумайте пароль</label>
+                <img
+                  class="pass-icon"
+                  src="./shared/images/hide-password-eye.svg"
+                  alt="eye-password"
+                />
+              </div>
 
-            <div class="form-item">
-              <input class="form-item-input" minlength="1" type="password" name="repeat_password" required />
-              <label role="placeholder">Повторите этот пароль</label>
-              <img class="pass-icon" src="./shared/images/hide-password-eye.svg" alt="eye-password" />
-            </div>
+              <div class="form-item">
+                <input
+                  class="form-item-input"
+                  minlength="1"
+                  type="password"
+                  name="repeat_password"
+                  required
+                />
+                <label role="placeholder">Повторите этот пароль</label>
+                <img
+                  class="pass-icon"
+                  src="./shared/images/hide-password-eye.svg"
+                  alt="eye-password"
+                />
+              </div>
 
               <button role="next-slide" type="submit">Далее</button>
             </form>
           </div>
 
-        <div class="slide__thanks-for">
-          <p>Спасибо за регистрацию!</p>
+          <div class="slide__thanks-for">
+            <p>Спасибо за регистрацию!</p>
 
-          <strong>
-            Мы отправили на указанную почту dencreate@gmail.com ссылкe для
-            подтверждения аккаунта, просьба пройти по нему и активировать
-            аккаунт
-          </strong>
+            <strong>
+              Мы отправили на указанную почту dencreate@gmail.com ссылкe для
+              подтверждения аккаунта, просьба пройти по нему и активировать
+              аккаунт
+            </strong>
 
-          <button class="end-slider">Отправить ещё раз</button>
-        </div>
-      </div>
-
-      <button id="close-modal">
-        <img src="./shared/images/close-modal.svg" alt="close-modal" />
-      </button>
-    </div>
-  </div>
-  <header class="header">
-    <div class="container">
-      <div class="header-top">
-        <img class="header-top__logo" src="./shared/images/logo.svg" alt="logo" />
-        <ul class="header-top__list">
-          <li class="header-top__list-item">
-            <img class="list-item__img" src="./shared/images/lock.svg" alt="lock" />
-            Вход
-          </li>
-          <li id="signup" class="header-top__list-item">Регистрация</li>
-          <li class="header-top__list-item">
-            <img class="list-item__img" src="./shared/images/menu.svg" alt="menu" />
-            Меню
-          </li>
-        </ul>
-      </div>
-      <div class="header-bottom">
-        <div class="header-bottom__box">
-          <h3 class="header-bottom__title">
-            Революционный <br />способ <br /><span class="title-gradient">знакомств</span>
-          </h3>
-          <p class="header-bottom__text">
-            Искусственный интеллект бесплатно подберет для вас пару или друзей
-            и организует встречу в безопасном месте
-          </p>
-          <div class="header-bottom__btn">
-            <button class="btn-left">
-              Хочу попробовать
-              <img src="./shared/images/try-icon.svg" alt="try-icon" />
-            </button>
-            <button class="btn-right">
-              Как это работает?
-              <img src="./shared/images/how-work-arrow.svg" alt="how-work-arrow" />
-            </button>
+            <button class="end-slider">Отправить ещё раз</button>
           </div>
         </div>
-        <img class="header-bottom__phone" src="./shared/images/header-phone.png" alt="header-phone" />
-        <img class="header-bottom__img" src="./shared/images/header-img.png" alt="header-img" />
+
+        <button id="close-modal">
+          <img src="./shared/images/close-modal.svg" alt="close-modal" />
+        </button>
       </div>
     </div>
-  </header>
 
-  <main class="main">
-    <section class="your-man">
-      <div class="container">
-        <h3 class="your-man__title">
-          Найти «своего»<br /><span class="title-gradient">человека</span>
-        </h3>
-        <p class="your-man__text">
-          Вы считали, сколько времени и денег вы тратите, чтобы найти «своего»
-          человека?<br /><br />
+    <div id="modal-signUp" class="sign-in" role="dialog" aria-modal="true">
+      <div class="modal-signIn__slick">
+        <div class="modal-signIn-container">
+          <button id="close-modal" class="close-sign-in">
+            <img src="./shared/images/close-modal.svg" alt="close-modal" />
+          </button>
+          <p>Вход</p>
+          <form id="sign-in">
+            <div class="form-item">
+              <input class="form-item-input" minLength="1" type="mail" required />
+              <label role="placeholder">Ваша почта</label>
+            </div>
 
-          Сколько свиданий заканчивается глубокими отношениями? Пять? Десять?
-          Больше?<br />
-          Каждое свидание — это несколько часов и тысячи рублей на подготовку,
-          дорогу и общение.
+            <div class="form-item">
+              <input class="form-item-input" minLength="1" type="password" required />
+              <label role="placeholder">Пароль</label>
+              <img
+                class="pass-icon"
+                src="./shared/images/hide-password-eye.svg"
+                alt="eye-password"
+              />
+            </div>
 
-          <br /><br />Мы нашли решение, как при помощи искусственного
-          интеллекта сделать так,<br />
-          чтобы вы нашли интересного вам человека сразу.
-        </p>
+            <div class="toggle-item">
+
+              <div class="toggle-info">
+                Запомнить на этом устройстве
+              </div>
+
+              <div class="toggle-element">
+                <div class="toggle-element__cirlce"></div>
+                <input type="checkbox" data-choose="remember-me" />
+              </div>
+            </div>
+            <button class="login">Войти</button>
+            <a class="restore" href="#">Востановить пароль?</a>
+          </div>
+          </form>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <div class="dropdown__menu" role="menu">
+      <nav class="dropdown__menu-container">
+        <ul class="user-info__list">
+          <li>
+            <div><img src="./shared/images/owner.svg" alt="menu-icon">Основатель</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+          <li>
+            <div><img src="./shared/images/dropdown-icon/feed.svg" alt="menu-icon">Новости</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+          <li>
+            <div><img src="./shared/images/dropdown-icon/about-project.svg" alt="menu-icon">О проекте</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+          <li>
+            <div><img src="./shared/images/dropdown-icon/recommendations.svg" alt="menu-icon">Рекомендации</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+          <li>
+            <div><img src="./shared/images/dropdown-icon/FAQ.svg" alt="menu-icon">Часто задаваемые вопросы</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+        </ul>
+        <ul class="user-tariff__list">
+          <li>
+            <div><img src="./shared/images/dropdown-icon/tariffsvg.svg" alt="menu-icon">Тарифы</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+          <li>
+            <div><img src="./shared/images//dropdown-icon/wallet.svg" alt="menu-icon">Об оплате и возврате средств</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+        </ul>
+        <ul class="user-personal-data__list">
+          <li>
+            <div><img src="./shared/images/dropdown-icon/signatures.svg" alt="menu-icon">Пользовательское соглашение</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+          <li>
+            <div><img src="./shared/images/dropdown-icon/guard.svg" alt="menu-icon">Обработка персональных данных</div>
+            <img src="./shared/images/arrow-right.svg" alt="arrow">
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <img
+            class="header-top__logo"
+            src="./shared/images/logo.svg"
+            alt="logo"
+          />
+          <ul class="header-top__list">
+            <li role="sign-in" class="header-top__list-item">
+              <img
+                class="list-item__img"
+                src="./shared/images/lock.svg"
+                alt="lock"
+              />
+              Вход
+            </li>
+            <li id="signup" class="header-top__list-item">Регистрация</li>
+            <li id="menu" class="header-top__list-item">
+              <img
+                class="list-item__img"
+                src="./shared/images/menu.svg"
+                alt="menu"
+              />
+              Меню
+            </li>
+          </ul>
+        </div>
+        <div class="header-bottom">
+          <div class="header-bottom__box">
+            <h3 class="header-bottom__title">
+              Революционный <br />способ <br /><span class="title-gradient"
+                >знакомств</span
+              >
+            </h3>
+            <p class="header-bottom__text">
+              Искусственный интеллект бесплатно подберет для вас пару или друзей
+              и организует встречу в безопасном месте
+            </p>
+            <div class="header-bottom__btn">
+              <button class="btn-left">
+                Хочу попробовать
+                <img src="./shared/images/try-icon.svg" alt="try-icon" />
+              </button>
+              <button class="btn-right">
+                Как это работает?
+                <img
+                  src="./shared/images/how-work-arrow.svg"
+                  alt="how-work-arrow"
+                />
+              </button>
+            </div>
+          </div>
+          <img
+            class="header-bottom__phone"
+            src="./shared/images/header-phone.png"
+            alt="header-phone"
+          />
+          <img
+            class="header-bottom__img"
+            src="./shared/images/header-img.png"
+            alt="header-img"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="your-man">
+        <div class="container">
+          <h3 class="your-man__title">
+            Найти «своего»<br /><span class="title-gradient">человека</span>
+          </h3>
+          <p class="your-man__text">
+            Вы считали, сколько времени и денег вы тратите, чтобы найти «своего»
+            человека?<br /><br />
+
+            Сколько свиданий заканчивается глубокими отношениями? Пять? Десять?
+            Больше?<br />
+            Каждое свидание — это несколько часов и тысячи рублей на подготовку,
+            дорогу и общение.
+
+            <br /><br />Мы нашли решение, как при помощи искусственного
+            интеллекта сделать так,<br />
+            чтобы вы нашли интересного вам человека сразу.
+          </p>
+        </div>
+      </section>
 
     <section class="how-work">
       <div class="container">
@@ -270,130 +439,172 @@
       </div>
     </section>
 
-    <section class="activity">
-      <div class="container">
-        <div class="activity__wrapper">
-          <div class="activity__left">
-            <h3 class="activity__title">
-              Больше<span class="title-gradient"><br />активности</span>
+      <section class="activity">
+        <div class="container">
+          <div class="activity__wrapper">
+            <div class="activity__left">
+              <h3 class="activity__title">
+                Больше<span class="title-gradient"><br />активности</span>
+              </h3>
+              <p class="activity__text">
+                Пройдя тесты ты можешь не только знакомиться с людьми, но и
+                ходить на разные мероприятия по выбранным интересам: на
+                концерты, в бар в отличной компании, на спортивные мероприятия,
+                на встречи с известными людьми и многое другое
+              </p>
+              <button class="btn-left">
+                Хочу попробовать
+                <img src="./shared/images/try-icon.svg" alt="try-icon" />
+              </button>
+            </div>
+            <div class="activity__right">
+              <h3>Творческие <br />мероприятия</h3>
+              <img
+                class="activity__right-img"
+                src="./shared/images/debili.png"
+                alt="debili"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pay">
+        <div class="pay__wrapper">
+          <div class="pay__left">
+            <h3 class="pay__title">
+              А так я получается<br /><span class="title-gradient"
+                >экономлю</span
+              >
             </h3>
-            <p class="activity__text">
-              Пройдя тесты ты можешь не только знакомиться с людьми, но и
-              ходить на разные мероприятия по выбранным интересам: на
-              концерты, в бар в отличной компании, на спортивные мероприятия,
-              на встречи с известными людьми и многое другое
+          </div>
+          <div class="pay__right">
+            <div class="pay__inner">
+              <div class="pay__box">
+                <p class="pay__text">Обычный</p>
+                <img
+                  src="./shared/images/plus.svg"
+                  alt="plus"
+                  width="19"
+                  height="12"
+                />
+              </div>
+              <p class="pay__text--2">
+                Сэкономьте до 30%<br />
+                при переходе на этот тариф
+              </p>
+              <ul class="pay__list">
+                <li class="pay__list-item">
+                  <img
+                    class="pay__list-img"
+                    src="./shared/images/check.svg"
+                    alt="check"
+                    width="10.5"
+                    height="9.5"
+                  />
+                  <p class="pay__list-text">Пробный период 1 месяц бесплатно</p>
+                </li>
+                <li class="pay__list-item">
+                  <img
+                    class="pay__list-img"
+                    src="./shared/images/check.svg"
+                    alt="check"
+                    width="10.5"
+                    height="9.5"
+                  />
+                  <p class="pay__list-text">
+                    Находите людей со 100% совместимостью
+                  </p>
+                </li>
+                <li class="pay__list-item">
+                  <img
+                    class="pay__list-img"
+                    src="./shared/images/check.svg"
+                    alt="check"
+                    width="10.5"
+                    height="9.5"
+                  />
+                  <p class="pay__list-text">
+                    Запретите видеться себя геолокации
+                  </p>
+                </li>
+                <li class="pay__list-item">
+                  <img
+                    class="pay__list-img"
+                    src="./shared/images/check.svg"
+                    alt="check"
+                    width="10.5"
+                    height="9.5"
+                  />
+                  <p class="pay__list-text">Скройтесь ото всех</p>
+                </li>
+              </ul>
+              <ul class="pay__price-list">
+                <li class="pay__price-list-item">
+                  <div class="pay__price-list-item-box">
+                    <span class="pay__price-list-item-box-text">1 месяц</span>
+                    <span class="pay__price-list-item-box-text">700 ₽</span>
+                  </div>
+                </li>
+                <li class="pay__price-list-item">
+                  <div class="pay__price-list-item-box">
+                    <span class="pay__price-list-item-box-text">6 месяцев</span>
+                    <span class="pay__price-list-item-box-text">3 360 ₽</span>
+                  </div>
+                  <span class="pay__price-list-item-box-text-2"
+                    >560 ₽ / месяц — экономия 20%</span
+                  >
+                </li>
+                <li class="pay__price-list-item">
+                  <div class="pay__price-list-item-box">
+                    <span class="pay__price-list-item-box-text"
+                      >12 месяцев</span
+                    >
+                    <span class="pay__price-list-item-box-text">5 880 ₽</span>
+                  </div>
+                  <div class="pay__price-list-item-box-2">
+                    <span class="pay__price-list-item-box-text-2"
+                      >490 ₽ / месяц — экономия 30%</span
+                    >
+                    <del class="pay__price-list-item-box-text-2--red"
+                      >8400 ₽</del
+                    >
+                  </div>
+                </li>
+              </ul>
+              <button class="pay__btn">Выбрать тариф</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner">
+        <div class="partner__wrapper">
+          <div class="container">
+            <h3 class="partner__title">
+              Найдите свою<br /><span class="title-gradient">пару</span>
+            </h3>
+            <p class="partner__text">
+              А если вам не понравится первая встреча, вы всегда можете найти
+              для себя нового знакомого.
             </p>
             <button class="btn-left">
               Хочу попробовать
               <img src="./shared/images/try-icon.svg" alt="try-icon" />
             </button>
           </div>
-          <div class="activity__right">
-            <h3>Творческие <br />мероприятия</h3>
-            <img class="activity__right-img" src="./shared/images/debili.png" alt="debili" />
-          </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__copyright">
+        <span> © Айри, 2023 г.</span>
+        <span>Все права защищены.</span>
+        <span>help@ayiri.ru</span>
       </div>
-    </section>
+    </footer>
 
-    <section class="pay">
-      <div class="pay__wrapper">
-        <div class="pay__left">
-          <h3 class="pay__title">
-            А так я получается<br /><span class="title-gradient">экономлю</span>
-          </h3>
-        </div>
-        <div class="pay__right">
-          <div class="pay__inner">
-            <div class="pay__box">
-              <p class="pay__text">Обычный</p>
-              <img src="./shared/images/plus.svg" alt="plus" width="19" height="12" />
-            </div>
-            <p class="pay__text--2">
-              Сэкономьте до 30%<br />
-              при переходе на этот тариф
-            </p>
-            <ul class="pay__list">
-              <li class="pay__list-item">
-                <img class="pay__list-img" src="./shared/images/check.svg" alt="check" width="10.5" height="9.5" />
-                <p class="pay__list-text">Пробный период 1 месяц бесплатно</p>
-              </li>
-              <li class="pay__list-item">
-                <img class="pay__list-img" src="./shared/images/check.svg" alt="check" width="10.5" height="9.5" />
-                <p class="pay__list-text">
-                  Находите людей со 100% совместимостью
-                </p>
-              </li>
-              <li class="pay__list-item">
-                <img class="pay__list-img" src="./shared/images/check.svg" alt="check" width="10.5" height="9.5" />
-                <p class="pay__list-text">
-                  Запретите видеться себя геолокации
-                </p>
-              </li>
-              <li class="pay__list-item">
-                <img class="pay__list-img" src="./shared/images/check.svg" alt="check" width="10.5" height="9.5" />
-                <p class="pay__list-text">Скройтесь ото всех</p>
-              </li>
-            </ul>
-            <ul class="pay__price-list">
-              <li class="pay__price-list-item">
-                <div class="pay__price-list-item-box">
-                  <span class="pay__price-list-item-box-text">1 месяц</span>
-                  <span class="pay__price-list-item-box-text">700 ₽</span>
-                </div>
-              </li>
-              <li class="pay__price-list-item">
-                <div class="pay__price-list-item-box">
-                  <span class="pay__price-list-item-box-text">6 месяцев</span>
-                  <span class="pay__price-list-item-box-text">3 360 ₽</span>
-                </div>
-                <span class="pay__price-list-item-box-text-2">560 ₽ / месяц — экономия 20%</span>
-              </li>
-              <li class="pay__price-list-item">
-                <div class="pay__price-list-item-box">
-                  <span class="pay__price-list-item-box-text">12 месяцев</span>
-                  <span class="pay__price-list-item-box-text">5 880 ₽</span>
-                </div>
-                <div class="pay__price-list-item-box-2">
-                  <span class="pay__price-list-item-box-text-2">490 ₽ / месяц — экономия 30%</span>
-                  <del class="pay__price-list-item-box-text-2--red">8400 ₽</del>
-                </div>
-              </li>
-            </ul>
-            <button class="pay__btn">Выбрать тариф</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="partner">
-      <div class="partner__wrapper">
-        <div class="container">
-          <h3 class="partner__title">
-            Найдите свою<br /><span class="title-gradient">пару</span>
-          </h3>
-          <p class="partner__text">
-            А если вам не понравится первая встреча, вы всегда можете найти
-            для себя нового знакомого.
-          </p>
-          <button class="btn-left">
-            Хочу попробовать
-            <img src="./shared/images/try-icon.svg" alt="try-icon" />
-          </button>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__copyright">
-      <span> © Айри, 2023 г.</span>
-      <span>Все права защищены.</span>
-      <span>help@ayiri.ru</span>
-    </div>
-  </footer>
-
-  <script src="./index.js" type="module"></script>
-</body>
-
+    <script src="./index.js" type="module"></script>
+  </body>
 </html>

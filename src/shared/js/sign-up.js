@@ -79,10 +79,10 @@ $(".pass-icon").on("click", (e) => {
     .siblings("input")
     .attr("type", (_, atr) => {
       if (atr === "password") {
-        $(e.currentTarget).attr("src", "images/show-password-eye.svg");
+        $(e.currentTarget).attr("src", "./shared/images/show-password-eye.svg");
         return "text";
       }
-      $(e.currentTarget).attr("src", "images/hide-password-eye.svg");
+      $(e.currentTarget).attr("src", "./shared/images/hide-password-eye.svg");
       return "password";
     });
 });

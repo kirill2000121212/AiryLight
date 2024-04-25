@@ -10,8 +10,8 @@ section {
   scroll-behavior: smooth;
 }
 
-header>.arrow__g,
-section>.arrow__g {
+header > .arrow__g,
+section > .arrow__g {
   position: absolute;
   bottom: 30px;
   left: 200px;
@@ -78,7 +78,6 @@ section>.arrow__g {
   .arrow__g {
     bottom: 20px;
   }
-
 }
 
 .how-work {
@@ -102,6 +101,16 @@ section>.arrow__g {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100vh;
+  }
+
+  &__right {
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -180,7 +189,6 @@ section>.arrow__g {
     .arrow__g {
       z-index: 2;
     }
-
   }
 
   &__title {
@@ -252,6 +260,8 @@ section>.arrow__g {
     background-color: rgb(250, 251, 252);
     border-radius: 12px;
     padding: 14px 15px 16px;
+    cursor: pointer;
+    position: relative;
   }
 
   &__price-list-item-box {
@@ -346,5 +356,4 @@ section>.arrow__g {
   .arrow {
     transform: rotate(180deg);
   }
-
 }

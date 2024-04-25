@@ -1,9 +1,6 @@
-.how-work{
-    
-}
+.how-work {}
 
 .how-work__wrapper {
-
     position: relative;
 
     & .slick-dots {
@@ -13,11 +10,26 @@
     }
 }
 
-.how-work--right{
-    
-    & .slick-slide{
-        height: 100vh;
+.how-work__right {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .slick-track {
+        max-width: 370px;
+        will-change: transform;
+        display: flex;
+        align-items: flex-start;
+        min-width: 0;
     }
+
+    & .slick-slide {
+        height: 100vh;
+        min-height: 0;
+    }
+
+    & .how-work__img {}
 }
 
 .slider__how-work {

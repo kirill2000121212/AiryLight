@@ -9,5 +9,6 @@ $('.slider__how-work').slick({
     slidesToScroll: 1,
     nextArrow: false,
     prevArrow: false,
-    swipe: true
+    swipe: true,
+    centerMode: true
 });

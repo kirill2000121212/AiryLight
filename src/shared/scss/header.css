@@ -1,0 +1,69 @@
+.header-bottom__title {
+  font-family: "Druk-Medium";
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.header {
+  height: 100vh;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  font-family: "Nunito Sans Regular";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  position: fixed;
+  width: 100%;
+  gap: 860px;
+  z-index: 102;
+}
+.header-top__logo {
+  cursor: pointer;
+}
+.header-top__list {
+  display: flex;
+  gap: 50px;
+}
+.header-top__list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.header-bottom {
+  display: flex;
+  position: relative;
+  padding-top: 210px;
+}
+.header-bottom__phone {
+  z-index: -1;
+  position: absolute;
+  right: 120px;
+  top: 185px;
+  transform: scale(0.9);
+}
+.header-bottom__img {
+  position: absolute;
+  right: -153px;
+  top: 150px;
+  z-index: -2;
+}
+.header-bottom__title {
+  padding-bottom: 68px;
+}
+.header-bottom__text {
+  font-family: "Nunito Sans Regular";
+  font-size: 22px;
+  line-height: 30px;
+  width: 466px;
+  padding-bottom: 36px;
+}
+.header-bottom__btn {
+  display: flex;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=header.css.map */

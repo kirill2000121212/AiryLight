@@ -45,6 +45,14 @@ export default defineConfig({
     host: "0.0.0.0",
     https: true,
     hmr: true,
+    proxy: {
+      "/send": "http://localhost:5050/send",
+      "/api": {
+        target: "http://localhost:5050",
+        changeOrigin: true,
+        rewrite: (path) => resolve(/^\/api/, ""),
+      },
+    },
   },
   plugins: [
     mkcert(),

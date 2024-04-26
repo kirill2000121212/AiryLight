@@ -1,9 +1,12 @@
 import { cacheData } from "./sign-up";
+import { sendMail } from "../service/sendMail";
+const $repeatSendMailBtn = $(".end-slider");
 
 document.querySelector("#form-signUp").addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const formData = new FormData();
+  const sharedData = cacheData;
+  const formData = new FormData(event.target);
   const valMail = $("input[name='email']").val();
   const valPassword = $("input[name='password']").val();
   const valPasswordReapet = $("input[name='repeat_password']").val();
@@ -25,8 +28,25 @@ document.querySelector("#form-signUp").addEventListener("submit", (event) => {
   ) {
     throw new Error("Пароли не совпадают!");
   }
-  formData["mail"] = valMail;
-  formData["password"] = valPassword;
+  const resultData = {
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      userData: Object.fromEntries(formData),
+      aboutUser: sharedData,
+    }),
+    method: "POST",
+  };
+  sendMail("http://localhost:5050/send", resultData)
+    .then((data) => console.log(data))
+    .catch((e) => console.log(e));
+
+  $repeatSendMailBtn.on("click", () => {
+    sendMail("http://localhost:5050/send", resultData)
+      .then((data) => console.log(data))
+      .catch((e) => console.log(e));
+  });
 });
 
 document.querySelector(".sign-in").addEventListener("submit", (event) => {

@@ -25,6 +25,9 @@
             ],
             "~pages/*": [
                 "src/pages/*"
+            ],
+            "~service/*": [
+                "src/shared/service/*"
             ]
         }
     }

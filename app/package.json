@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "start": "node ./index.js",
-    "server": "concurrently \"vite ../src/index.js\" \"start\""
+    "start": "nodemon ./index.js"
   }
 }

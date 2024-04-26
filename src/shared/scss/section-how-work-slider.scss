@@ -1,24 +1,41 @@
-.how-work{
-    
-}
-
 .how-work__wrapper {
-
     position: relative;
 
     & .slick-dots {
         position: absolute;
-        left: 0;
-        bottom: 0;
+        left: 130px;
+        bottom: 60px;
+    }
+
+    & .slick-track {
+        max-width: 370px;
+        will-change: transform;
+        display: flex;
+        align-items: flex-start;
+        min-width: 0;
+    }
+
+    & .slick-slide {
+        height: 100vh;
+        min-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .how-work__img {
+        transform: translateY(282px);
+    }
+
+    & .how-work__right {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-.how-work--right{
-    
-    & .slick-slide{
-        height: 100vh;
-    }
-}
+
 
 .slider__how-work {
 

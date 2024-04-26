@@ -43,8 +43,10 @@
     z-index: -1;
     position: absolute;
     right: 120px;
-    top: 185px;
+    top: 763px;
     transform: scale(0.9);
+    animation: phone-animation 1s cubic-bezier(0, 1, 0.5, 1) forwards;
+    will-change: transform;
   }
 
   &-bottom__img {
@@ -52,6 +54,7 @@
     right: -153px;
     top: 150px;
     z-index: -2;
+    animation: header-img 2s ease forwards;
   }
 
   &-bottom__title {
@@ -70,5 +73,25 @@
   &-bottom__btn {
     display: flex;
     gap: 20px;
+  }
+}
+
+@keyframes phone-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-578px);
+  }
+}
+
+@keyframes header-img {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

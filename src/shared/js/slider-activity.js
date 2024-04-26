@@ -1,4 +1,4 @@
-$('.slider__how-work').slick({
+$('.slider__activity').slick({
     dots: true,
     infinite: true,
     speed: 500,

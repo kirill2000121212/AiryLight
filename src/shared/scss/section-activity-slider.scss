@@ -1,0 +1,30 @@
+.activity__wrapper {
+    position: relative;
+
+    & .slick-dots {
+        position: absolute;
+        left: 320px;
+        bottom: 65px;
+    }
+
+    & .activity__slider-color--1 {
+        background-color: rgb(237, 230, 167);
+    }
+
+    & .activity__slider-color--2 {
+        background-color: rgb(193, 225, 151);
+    }
+
+    & .activity__slider-color--3 {
+        background-color: rgb(255, 169, 221);
+    }
+
+    & .activity__slider-color--4 {
+        background-color: rgb(244, 111, 143);
+    }
+
+    & .activity__slider-title {
+        padding-left: 110px;
+        padding-top: 210px;
+    }
+}

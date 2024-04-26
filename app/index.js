@@ -38,7 +38,7 @@ app.post("/send", async (req, res) => {
       from: process.env.EMAIL_LOGIN,
       to: userData["email"],
       subject: "Sign up AiryLight",
-      html: "hahahaha",
+      html: "построй свою любовь сука!",
     });
 
     return res.status(200).send({
